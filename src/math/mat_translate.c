@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 22:26:49 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:24:52 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:41:53 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 void	mat4_translate(double mat[4][4], double x, double y, double z)
 {

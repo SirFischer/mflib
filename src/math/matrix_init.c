@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 22:41:27 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:27:11 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:42:14 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 void			mat4_init(double mat[4][4])
 {

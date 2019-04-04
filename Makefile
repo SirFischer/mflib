@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/03/30 23:43:58 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/04 22:48:24 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,12 @@ NAME		=	mylib.a
 #
 
 INC_PATH	=	include/
-SRCS		=	src/main.c
+SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
+				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
+				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
+				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
+				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
+				src/math/vector_init.c src/math/mat4_rotate.c
 
 #
 
@@ -35,15 +40,15 @@ $(OBJS)		:	| obj
 
 obj			:	
 		@mkdir	-p $@
+		@mkdir	-p $@/math
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
-		$(CC)	$(CFLAGS) -c $< -o $@
+		$(CC)	$(CFLAGS) -lm -c $< -o $@
 		@echo	"\033[32m[DONE]\033[0m"
 
 $(NAME)		:	$(OBJS)
 		@echo	"\033[31m--| Creation de mylib.a : $@ |--\033[0m"
-		$(CC)	-c $^ -lm
 		$(CL)	$(NAME) $^
 		$(RAN)	$(NAME)
 		@echo	"\033[32m[DONE]\033[0m\n"

@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 13:41:00 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:27:49 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:42:39 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 double			vec4_dot(double vec[4], double vec2[4])
 {

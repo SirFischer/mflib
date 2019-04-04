@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 18:44:18 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:27:31 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:42:26 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 void	vec3vec4_convert(double vec[3], double res[4])
 {

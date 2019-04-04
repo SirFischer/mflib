@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 23:03:42 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:25:49 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:41:57 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 void	mat4_rotate_yaw(double mat[4][4], double angle)
 {

@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 22:46:09 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:28:49 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/04 22:43:06 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/math.h"
+#include "../../include/mymath.h"
 
 void		vec4_init(double vec[4])
 {
