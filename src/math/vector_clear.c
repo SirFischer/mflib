@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   boolean.h                                          :+:      :+:    :+:   */
+/*   vector_clear.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/31 00:08:34 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:29:03 by mfischer         ###   ########.fr       */
+/*   Created: 2019/03/28 23:33:00 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/04 22:28:25 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOLEAN_H
-# define BOOLEAN_H
+#include "../../include/math.h"
 
-typedef enum	e_bool
+void		vec4_clear(double vec[4])
 {
-	FALSE,
-	TRUE
-}				t_bool;
+	vec[0] = 0;
+	vec[1] = 0;
+	vec[2] = 0;
+	vec[3] = 0;
+}
 
-#endif
+void		vec3_clear(double vec[3])
+{
+	vec[0] = 0;
+	vec[1] = 0;
+	vec[2] = 0;
+}
+
+void		vec2_clear(double vec[2])
+{
+	vec[0] = 0;
+	vec[1] = 0;
+}

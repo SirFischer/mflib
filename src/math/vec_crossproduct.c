@@ -1,22 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   boolean.h                                          :+:      :+:    :+:   */
+/*   vec_crossproduct.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/31 00:08:34 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:29:03 by mfischer         ###   ########.fr       */
+/*   Created: 2019/03/29 18:21:54 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/04 22:27:37 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOLEAN_H
-# define BOOLEAN_H
+#include "../../include/math.h"
 
-typedef enum	e_bool
+void	vec3vec3_crossproduct(double v1[3], double v2[3], double result[3])
 {
-	FALSE,
-	TRUE
-}				t_bool;
-
-#endif
+	result[0] = (v1[1] * v2[2]) - (v1[2] * v2[1]);
+	result[1] = (v1[2] * v2[0]) - (v1[0] * v2[2]);
+	result[2] = (v1[0] * v2[1]) - (v1[1] * v2[0]);
+}

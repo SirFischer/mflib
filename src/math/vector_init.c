@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   boolean.h                                          :+:      :+:    :+:   */
+/*   vector_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/31 00:08:34 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:29:03 by mfischer         ###   ########.fr       */
+/*   Created: 2019/03/28 22:46:09 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/04 22:28:49 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BOOLEAN_H
-# define BOOLEAN_H
+#include "../../include/math.h"
 
-typedef enum	e_bool
+void		vec4_init(double vec[4])
 {
-	FALSE,
-	TRUE
-}				t_bool;
+	vec[0] = 0;
+	vec[1] = 0;
+	vec[2] = 0;
+	vec[3] = 1;
+}
 
-#endif
+void		vec3_init(double vec[3])
+{
+	vec[0] = 0;
+	vec[1] = 0;
+	vec[2] = 1;
+}
+
+void		vec2_init(double vec[2])
+{
+	vec[0] = 0;
+	vec[1] = 0;
+}
