@@ -6,11 +6,11 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/04 22:48:24 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/07 00:45:09 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	mylib.a
+NAME		=	mflib.a
 
 #
 
@@ -20,7 +20,8 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
 				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
 				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
-				src/math/vector_init.c src/math/mat4_rotate.c
+				src/math/vector_init.c src/math/mat4_rotate.c \
+				src/string/myitoa.c
 
 #
 
@@ -41,6 +42,7 @@ $(OBJS)		:	| obj
 obj			:	
 		@mkdir	-p $@
 		@mkdir	-p $@/math
+		@mkdir	-p $@/string
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
