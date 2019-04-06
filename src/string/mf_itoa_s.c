@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   myitoa.c                                           :+:      :+:    :+:   */
+/*   mf_itoa_s.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/06 19:31:22 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/06 19:55:40 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/07 00:58:36 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/07 01:02:44 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mystring.h"
+#include "../../include/mfstring.h"
 
 static int	count_digits(int num)
 {
@@ -27,16 +27,14 @@ static int	count_digits(int num)
 	return (i);
 }
 
-char	*myitoa(int num)
+void	mf_itoa_s(int num, char *res)
 {
-	char	*res;
 	int		len;
 	int		neg;
 
 	len = count_digits(num);
 	neg = (num < 0) ? 1 : 0;
 	len += (num < 0) ? 1 : 0;
-	res = (char *)malloc(sizeof(char) * (len + 1));
 	res[len] = '\0';
 	while(--len >= 0)
 	{
@@ -45,5 +43,4 @@ char	*myitoa(int num)
 	}
 	if (neg)
 		res[0] = '-';
-	return (res);
 }
