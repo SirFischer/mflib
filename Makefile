@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/07 01:01:21 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/09 12:06:45 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
 				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
 				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
-				src/math/vector_init.c src/math/mat4_rotate.c \
+				src/math/vector_init.c src/math/mat4_rotate.c src/math/vec_copy.c \
 				src/string/mf_itoa.c src/string/mf_itoa_s.c
 
 #

@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:41:39 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/09 12:06:16 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,9 @@ void			vec2_normalize(double vector[2], double result[2]);
 double			vec4_dot(double vec[4], double vec2[4]);
 double			vec3_dot(double vec[3], double vec2[3]);
 double			vec2_dot(double vec[2], double vec2[2]);
+
+void			vec4_copy(double dest[4], double src[4]);
+void			vec3_copy(double dest[3], double src[3]);
 
 /*
 ** VECTOR & VECTOR OPERATIONS
