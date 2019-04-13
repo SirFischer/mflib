@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mymath.h                                           :+:      :+:    :+:   */
+/*   mfmath.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/09 12:06:16 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:49:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,10 @@ double			vec2_dot(double vec[2], double vec2[2]);
 
 void			vec4_copy(double dest[4], double src[4]);
 void			vec3_copy(double dest[3], double src[3]);
+
+void			vec4scalar_multiply(double vec[4], double scalar, double res[4]);
+void			vec3scalar_multiply(double vec[3], double scalar, double res[3]);
+void			vec2scalar_multiply(double vec[2], double scalar, double res[2]);
 
 /*
 ** VECTOR & VECTOR OPERATIONS

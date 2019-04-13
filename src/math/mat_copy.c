@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 22:57:28 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:41:45 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:51:03 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void	mat4_copy(double dest[4][4], double src[4][4])
 {

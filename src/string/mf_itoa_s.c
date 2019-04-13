@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/07 00:58:36 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/07 01:02:44 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:53:24 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mfstring.h"
+#include "mfstring.h"
 
 static int	count_digits(int num)
 {

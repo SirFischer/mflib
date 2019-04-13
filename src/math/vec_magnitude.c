@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 17:38:55 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:42:45 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:52:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 double			vec4_magnitude(double vector[4])
 {

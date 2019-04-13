@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/09 12:06:45 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/13 14:50:11 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ obj			:
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
-		$(CC)	$(CFLAGS) -lm -c $< -o $@
+		$(CC)	$(CFLAGS) -I $(INC_PATH) -lm -c $< -o $@
 		@echo	"\033[32m[DONE]\033[0m"
 
 $(NAME)		:	$(OBJS)

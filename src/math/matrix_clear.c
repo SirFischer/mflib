@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 23:30:08 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:42:09 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:51:42 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void			mat4_clear(double mat[4][4])
 {

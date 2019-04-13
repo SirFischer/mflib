@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 17:51:18 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/09 13:57:07 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:52:35 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void			vec4_normalize(double vector[4], double result[4])
 {

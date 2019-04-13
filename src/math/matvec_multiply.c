@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 23:24:22 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:42:18 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:51:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void	mat4vec4_multiply(double mat[4][4], double vec[4], double res[4])
 {

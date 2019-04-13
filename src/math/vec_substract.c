@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 17:29:17 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:42:56 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:52:45 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void			vec4vec4_substract(double minuend[4], double subtrahend[4], double difference[4])
 {

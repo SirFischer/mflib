@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/29 18:21:54 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/04 22:42:34 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/13 14:52:19 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../include/mymath.h"
+#include "mfmath.h"
 
 void	vec3vec3_crossproduct(double v1[3], double v2[3], double result[3])
 {
