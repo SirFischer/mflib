@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_lstmap.c                                        :+:      :+:    :+:   */
+/*   mf_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:48:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 17:46:51 by mfischer         ###   ########.fr       */
+/*   Created: 2018/11/08 15:16:34 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/15 17:51:09 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist.h"
+#include "mfmemory.h"
 
-t_list	*mf_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+void	*mf_memalloc(size_t size)
 {
-	t_list *head;
-	t_list *tail;
+	void *mem;
 
-	if (!lst || !f)
+	if (!(mem = malloc(size)))
 		return (NULL);
-	tail = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-	head = tail;
-	while (lst->next)
-	{
-		lst = lst->next;
-		tail->next = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-		tail = tail->next;
-	}
-	tail->next = NULL;
-	return (head);
+	mem = mf_memset(mem, 0, size);
+	return (mem);
 }

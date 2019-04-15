@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/15 15:36:13 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/15 17:52:48 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,15 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
 				src/math/vector_init.c src/math/mat4_rotate.c src/math/vec_copy.c \
 				src/math/vecscalar_multiply.c \
-				src/string/mf_itoa.c src/string/mf_itoa_s.c \
+				src/string/mf_itoa.c src/string/mf_itoa_s.c src/string/mf_strnew.c \
+				src/string/mf_strchr.c src/string/mf_strcpy.c src/string/mf_strclr.c \
+				src/string/mf_strdup.c src/string/mf_strlen.c src/string/mf_strjoin.c \
 				src/files/get_next_line.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
-				src/list/mf_lstnew.c
+				src/list/mf_lstnew.c \
+				src/memory/mf_memset.c src/memory/mf_bzero.c src/memory/mf_memalloc.c \
+				src/memory/mf_memcpy.c
 
 #
 
@@ -50,6 +54,7 @@ obj			:
 		@mkdir	-p $@/string
 		@mkdir	-p $@/files
 		@mkdir	-p $@/list
+		@mkdir	-p $@/memory
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"

@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_lstmap.c                                        :+:      :+:    :+:   */
+/*   mf_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:48:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 17:46:51 by mfischer         ###   ########.fr       */
+/*   Created: 2018/11/08 13:18:39 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/15 17:42:47 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist.h"
+#include "mfstring.h"
 
-t_list	*mf_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*mf_strdup(const char *s1)
 {
-	t_list *head;
-	t_list *tail;
+	char	*res;
+	int		size;
+	int		x;
 
-	if (!lst || !f)
+	x = -1;
+	size = mf_strlen(s1) + 1;
+	if (!(res = (char *)malloc(sizeof(char) * size)))
 		return (NULL);
-	tail = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-	head = tail;
-	while (lst->next)
-	{
-		lst = lst->next;
-		tail->next = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-		tail = tail->next;
-	}
-	tail->next = NULL;
-	return (head);
+	while (++x < (size))
+		res[x] = s1[x];
+	return (res);
 }

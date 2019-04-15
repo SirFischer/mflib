@@ -1,32 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_lstmap.c                                        :+:      :+:    :+:   */
+/*   mf_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:48:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 17:46:51 by mfischer         ###   ########.fr       */
+/*   Created: 2018/11/12 14:10:25 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/15 17:33:12 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist.h"
+#include "mfstring.h"
 
-t_list	*mf_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*mf_strchr(const char *s, int c)
 {
-	t_list *head;
-	t_list *tail;
-
-	if (!lst || !f)
-		return (NULL);
-	tail = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-	head = tail;
-	while (lst->next)
+	while (*s)
 	{
-		lst = lst->next;
-		tail->next = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-		tail = tail->next;
+		if (*s++ == (char)c)
+			return ((char *)--s);
 	}
-	tail->next = NULL;
-	return (head);
+	if (*s == (char)c)
+		return ((char *)s);
+	return (NULL);
 }

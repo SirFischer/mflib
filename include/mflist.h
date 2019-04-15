@@ -6,12 +6,14 @@
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 15:22:43 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 15:27:37 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/15 17:45:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MFLIST_H
 # define MFLIST_H
+
+# include <stdlib.h>
 
 typedef struct			s_list
 {

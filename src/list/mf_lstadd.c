@@ -6,7 +6,7 @@
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/13 14:41:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 15:33:14 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/15 17:46:13 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	mf_lstadd(t_list **alst, t_list *new)
 {
-	if (!alts || !*alst)
+	if (!alst || !*alst)
 		return ;
 	new->next = *alst;
 	*alst = new;

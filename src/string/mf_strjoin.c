@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_lstmap.c                                        :+:      :+:    :+:   */
+/*   mf_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:48:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 17:46:51 by mfischer         ###   ########.fr       */
+/*   Created: 2018/11/08 16:09:22 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/15 17:44:11 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist.h"
+#include "mfstring.h"
 
-t_list	*mf_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
+char	*mf_strjoin(char const *s1, char const *s2)
 {
-	t_list *head;
-	t_list *tail;
+	size_t	totlen;
+	char	*res;
+	size_t	counter;
 
-	if (!lst || !f)
+	if (!s1 || !s2)
 		return (NULL);
-	tail = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-	head = tail;
-	while (lst->next)
-	{
-		lst = lst->next;
-		tail->next = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-		tail = tail->next;
-	}
-	tail->next = NULL;
-	return (head);
+	totlen = mf_strlen(s1) + mf_strlen(s2);
+	if (!(res = (char *)malloc(sizeof(char) * (totlen + 1))))
+		return (NULL);
+	counter = 0;
+	while (*s1)
+		res[counter++] = *s1++;
+	while (*s2)
+		res[counter++] = *s2++;
+	res[counter] = '\0';
+	return (res);
 }

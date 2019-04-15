@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_lstmap.c                                        :+:      :+:    :+:   */
+/*   mfmemory.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/13 14:48:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/15 17:46:51 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/15 17:28:16 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/15 17:52:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist.h"
+#ifndef MFMEMORY_H
+# define MFMEMORY_H
 
-t_list	*mf_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
-{
-	t_list *head;
-	t_list *tail;
+# include <stdlib.h>
 
-	if (!lst || !f)
-		return (NULL);
-	tail = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-	head = tail;
-	while (lst->next)
-	{
-		lst = lst->next;
-		tail->next = mf_lstnew((*f)(lst)->content, (*f)(lst)->content_size);
-		tail = tail->next;
-	}
-	tail->next = NULL;
-	return (head);
-}
+void                *mf_bzero(void *s, size_t n);
+void                *mf_memset(void *b, int c, size_t len);
+void				*mf_memalloc(size_t size);
+void				*mf_memcpy(void *dst, const void *src, size_t n);
+
+#endif
