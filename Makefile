@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/13 15:02:09 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/15 15:36:13 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,11 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
 				src/math/vector_init.c src/math/mat4_rotate.c src/math/vec_copy.c \
 				src/math/vecscalar_multiply.c \
-				src/string/mf_itoa.c src/string/mf_itoa_s.c
+				src/string/mf_itoa.c src/string/mf_itoa_s.c \
+				src/files/get_next_line.c \
+				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
+				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
+				src/list/mf_lstnew.c
 
 #
 
@@ -44,10 +48,12 @@ obj			:
 		@mkdir	-p $@
 		@mkdir	-p $@/math
 		@mkdir	-p $@/string
+		@mkdir	-p $@/files
+		@mkdir	-p $@/list
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
-		$(CC)	$(CFLAGS) -I $(INC_PATH) -lm -c $< -o $@
+		$(CC)	$(CFLAGS) -I $(INC_PATH) -c $< -o $@
 		@echo	"\033[32m[DONE]\033[0m"
 
 $(NAME)		:	$(OBJS)
