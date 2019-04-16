@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/15 17:52:48 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/16 11:57:57 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,9 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
 				src/list/mf_lstnew.c \
 				src/memory/mf_memset.c src/memory/mf_bzero.c src/memory/mf_memalloc.c \
-				src/memory/mf_memcpy.c
+				src/memory/mf_memcpy.c \
+				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
+				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c
 
 #
 
@@ -55,6 +57,7 @@ obj			:
 		@mkdir	-p $@/files
 		@mkdir	-p $@/list
 		@mkdir	-p $@/memory
+		@mkdir	-p $@/stack
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
