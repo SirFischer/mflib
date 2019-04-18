@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 11:37:37 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/16 11:42:25 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/18 14:34:47 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void			*stack_pop(t_stack *stack)
 		tmp = stack->data[stack->top];
 		stack->data[stack->top] = NULL;
 		stack->top--;
+		return (tmp);
 	}
-	return (tmp);
+	return (NULL);
 }
