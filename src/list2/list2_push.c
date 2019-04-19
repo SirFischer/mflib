@@ -1,0 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list2_push.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/19 15:26:17 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/19 15:29:21 by mfischer         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "mflist2.h"
+
+void				list2_push(t_list2 *list, void *data)
+{
+	t_node *new;
+	t_node *tmp;
+
+	if (!(new = (t_node *)malloc(sizeof(t_node))))
+		return ;
+	tmp = list->list;
+	list->list = new;
+	new->next = tmp;
+	new->prev = NULL;
+	new->data = data;
+}
