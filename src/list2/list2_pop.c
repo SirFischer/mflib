@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_push.c                                       :+:      :+:    :+:   */
+/*   list2_pop.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 15:26:17 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 20:40:33 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/19 20:39:12 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/19 20:46:05 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mflist2.h"
 
-void				list2_push(t_list2 *list, void *data)
+void				*list2_pop(t_list2 *list)
 {
-	t_node *new;
-	t_node *tmp;
+	t_node	*tmp;
+	void	*data;
 
-	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		return ;
+	if (!list->list)
+		return (NULL);
 	tmp = list->list;
-	list->list = new;
-	new->next = tmp;
-	new->prev = NULL;
-	new->data = data;
-	list->size++;
+	list->list = list->list->next;
+	list->list->prev = NULL;
+	data = list->list->data;
+	free(tmp);
+	return (data);
 }

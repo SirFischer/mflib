@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_push.c                                       :+:      :+:    :+:   */
+/*   list2_destroy.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 15:26:17 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 20:40:33 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/19 21:10:45 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/19 21:26:36 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mflist2.h"
 
-void				list2_push(t_list2 *list, void *data)
+static	void		recursive_free(t_node *head)
 {
-	t_node *new;
-	t_node *tmp;
+	if (head->next)
+		recursive_free(head->next);
+	free(head);
+}
 
-	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		return ;
-	tmp = list->list;
-	list->list = new;
-	new->next = tmp;
-	new->prev = NULL;
-	new->data = data;
-	list->size++;
+void				list2_destroy(t_list2 **list)
+{
+	if ((*list)->size > 0)
+		recursive_free((*list)->list);
+	free(*list);
+	*list = NULL;
 }

@@ -1,28 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_push.c                                       :+:      :+:    :+:   */
+/*   list2_at.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 15:26:17 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 20:40:33 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/19 21:05:07 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/19 21:09:38 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mflist2.h"
 
-void				list2_push(t_list2 *list, void *data)
+void				*list2_at(t_list2 *list, int index)
 {
-	t_node *new;
-	t_node *tmp;
+	t_node *head;
+	int i;
 
-	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		return ;
-	tmp = list->list;
-	list->list = new;
-	new->next = tmp;
-	new->prev = NULL;
-	new->data = data;
-	list->size++;
+	i = -1;
+	head = list->list;
+	if (list->size == 0)
+		return (NULL);
+	while (head->next && ++i < index)
+		head = head->next;
+	return (head->data);
 }

@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 15:09:43 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 15:25:07 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/19 21:32:12 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ t_list2				*list2_create()
 		return (NULL);
 	list->size = 0;
 	list->list = NULL;
+	return (list);
 }

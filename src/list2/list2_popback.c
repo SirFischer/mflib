@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_push.c                                       :+:      :+:    :+:   */
+/*   list2_popback.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 15:26:17 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 20:40:33 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/19 20:47:04 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/19 21:04:34 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mflist2.h"
 
-void				list2_push(t_list2 *list, void *data)
+void				*list2_popback(t_list2	*list)
 {
-	t_node *new;
-	t_node *tmp;
+	t_node	*head;
+	t_node	*tmp;
+	void	*data;
 
-	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		return ;
-	tmp = list->list;
-	list->list = new;
-	new->next = tmp;
-	new->prev = NULL;
-	new->data = data;
-	list->size++;
+	if (list->size == 0)
+		return (NULL);
+	list->size--;
+	head = list->list;
+	while (head->next)
+			head = head->next;
+	data = head->data;
+	tmp = head->prev;
+	if (list->size == 1)
+		list->list = NULL;
+	if (list->size > 1)
+		tmp->next = NULL;
+	free(head);
+	return (data);
 }

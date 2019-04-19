@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:44:39 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/16 11:09:30 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/19 21:27:54 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@
 # include "include/mfstring.h"
 # include "include/mffiles.h"
 # include "include/mflist.h"
+# include "include/mflist2.h"
 # include "include/mfmemory.h"
 # include "include/mfstack.h"
 

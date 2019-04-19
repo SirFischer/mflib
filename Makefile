@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/16 11:57:57 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/19 21:30:10 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,9 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
 				src/list/mf_lstnew.c \
+				src/list2/list2_at.c src/list2/list2_create.c src/list2/list2_destroy.c \
+				src/list2/list2_pop.c src/list2/list2_popback.c src/list2/list2_push.c \
+				src/list2/list2_pushback.c \
 				src/memory/mf_memset.c src/memory/mf_bzero.c src/memory/mf_memalloc.c \
 				src/memory/mf_memcpy.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
@@ -56,6 +59,7 @@ obj			:
 		@mkdir	-p $@/string
 		@mkdir	-p $@/files
 		@mkdir	-p $@/list
+		@mkdir	-p $@/list2
 		@mkdir	-p $@/memory
 		@mkdir	-p $@/stack
 
