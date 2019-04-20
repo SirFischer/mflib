@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 19:27:14 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/20 10:01:24 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/20 10:03:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <boolean.h>
+# include "boolean.h"
 
 char	*mf_itoa(int num);
 void	mf_itoa_s(int num, char *res);
