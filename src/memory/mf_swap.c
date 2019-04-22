@@ -1,25 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mfmemory.h                                         :+:      :+:    :+:   */
+/*   mf_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/15 17:28:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/22 15:30:33 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/22 15:27:32 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/22 15:30:20 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MFMEMORY_H
-# define MFMEMORY_H
+#include "mfmemory.h"
 
-# include <stdlib.h>
+void				mf_swap_doubles(double *one, double *two, size_t n)
+{
+	size_t	i;
+	double	tmp;
 
-void                *mf_bzero(void *s, size_t n);
-void                *mf_memset(void *b, int c, size_t len);
-void				*mf_memalloc(size_t size);
-void				*mf_memcpy(void *dst, const void *src, size_t n);
-void				mf_swap_doubles(double *one, double *two, size_t n);
-void				mf_swap_int(int *one, int *two, size_t n);
+	i = -1;
+	while (++i < n)
+	{
+		tmp = one[i];
+		one[i] = two[i];
+		two[i] = tmp;
+	}
+}
 
-#endif
+void				mf_swap_int(int *one, int *two, size_t n)
+{
+	size_t	i;
+	double	tmp;
+
+	i = -1;
+	while (++i < n)
+	{
+		tmp = one[i];
+		one[i] = two[i];
+		two[i] = tmp;
+	}
+}
