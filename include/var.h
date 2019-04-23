@@ -1,41 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mf_swap.c                                          :+:      :+:    :+:   */
+/*   var.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/22 15:27:32 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/22 15:30:20 by mfischer         ###   ########.fr       */
+/*   Created: 2019/04/23 23:40:10 by mfischer          #+#    #+#             */
+/*   Updated: 2019/04/24 00:04:03 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mfmemory.h"
+#ifndef VAR_H
+# define VAR_H
 
-void				mf_swap_doubles(double *one, double *two, size_t n)
-{
-	size_t	i;
-	double	tmp;
+# include <stdlib.h>
+# include <stdarg.h>
 
-	i = -1;
-	while (++i < n)
-	{
-		tmp = one[i];
-		one[i] = two[i];
-		two[i] = tmp;
-	}
-}
+void				mf_swap_doubles(double *one, double *two, size_t n);
+void				mf_swap_int(int *one, int *two, size_t n);
+double				mf_min_double(int num, ...);
+int					mf_min_int(int num, ...);
 
-void				mf_swap_int(int *one, int *two, size_t n)
-{
-	size_t	i;
-	double	tmp;
-
-	i = -1;
-	while (++i < n)
-	{
-		tmp = one[i];
-		one[i] = two[i];
-		two[i] = tmp;
-	}
-}
+#endif

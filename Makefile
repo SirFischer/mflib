@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/22 15:29:55 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/24 00:04:20 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,9 +35,10 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/list2/list2_pop.c src/list2/list2_popback.c src/list2/list2_push.c \
 				src/list2/list2_pushback.c \
 				src/memory/mf_memset.c src/memory/mf_bzero.c src/memory/mf_memalloc.c \
-				src/memory/mf_memcpy.c src/memory/mf_swap.c \
+				src/memory/mf_memcpy.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
-				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c
+				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c \
+				src/var/mf_swap.c src/var/mf_min.c
 
 #
 
@@ -64,6 +65,7 @@ obj			:
 		@mkdir	-p $@/list2
 		@mkdir	-p $@/memory
 		@mkdir	-p $@/stack
+		@mkdir	-p $@/var
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"

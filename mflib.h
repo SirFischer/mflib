@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:44:39 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/20 10:03:41 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/23 23:46:34 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@
 
 # include "include/math_types.h"
 # include "include/mfmath.h"
+# include "var.h"
 # include "include/mfstring.h"
 # include "include/mffiles.h"
 # include "include/mflist.h"
