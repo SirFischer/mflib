@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 13:17:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 21:31:20 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/25 00:52:17 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void				*list2_pop(t_list2 *list);
 void				*list2_popback(t_list2	*list);
 void				*list2_at(t_list2 *list, int index);
 void				list2_destroy(t_list2 **list);
+void				**list2_toarray(t_list2 *list, int *list_size);
 
 #endif
