@@ -6,13 +6,13 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 15:15:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 22:17:16 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/25 17:32:02 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MFFILES_H
 # define MFFILES_H
-# define BUFF_SIZE 32
+# define BUFF_SIZE 4096
 
 # include <sys/types.h>
 # include <sys/stat.h>

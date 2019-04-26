@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 20:47:04 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/19 21:04:34 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/26 17:15:33 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void				*list2_popback(t_list2	*list)
 	t_node	*tmp;
 	void	*data;
 
-	if (list->size == 0)
+	if (list->size == 0 || !list->list)
 		return (NULL);
 	list->size--;
 	head = list->list;
