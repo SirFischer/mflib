@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/16 11:06:53 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/16 11:53:41 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/29 16:53:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ void			stack_destroy(t_stack **stack);
 void			*stack_top(t_stack *stack);
 void			stack_push(t_stack *stack, void *data);
 void			*stack_pop(t_stack *stack);
+void			stack_reset(t_stack *stack, t_bool f);
 
 #endif

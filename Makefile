@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/04/26 17:14:36 by mfischer         ###   ########.fr        #
+#    Updated: 2019/04/29 16:53:56 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,6 +38,7 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/memory/mf_memcpy.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
 				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c \
+				src/stack/stack_reset.c \
 				src/var/mf_swap.c src/var/mf_min.c
 
 #
