@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/13 14:49:30 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/04/30 18:08:36 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,6 +92,9 @@ void			vec4scalar_multiply(double vec[4], double scalar, double res[4]);
 void			vec3scalar_multiply(double vec[3], double scalar, double res[3]);
 void			vec2scalar_multiply(double vec[2], double scalar, double res[2]);
 
+void			vec4scalar_add(double vec[4], double scalar, double res[4]);
+void			vec3scalar_add(double vec[3], double scalar, double res[3]);
+void			vec2scalar_add(double vec[2], double scalar, double res[2]);
 /*
 ** VECTOR & VECTOR OPERATIONS
 */
