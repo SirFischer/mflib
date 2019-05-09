@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vec_normalize.c                                    :+:      :+:    :+:   */
+/*   vec_normalize_s.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/29 17:51:18 by mfischer          #+#    #+#             */
-/*   Updated: 2019/05/09 16:36:49 by mfischer         ###   ########.fr       */
+/*   Created: 2019/05/09 16:36:01 by mfischer          #+#    #+#             */
+/*   Updated: 2019/05/09 16:38:16 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mfmath.h"
 
-void			vec4_normalize(double vector[4], double result[4])
+void			vec4_normalize_s(double vector[4])
 {
 	double	mag;
 	int		i;
@@ -20,10 +20,10 @@ void			vec4_normalize(double vector[4], double result[4])
 	mag = vec4_magnitude(vector);
 	i = -1;
 	while (++i < 4)
-		result[i] = vector[i] / mag;
+		vector[i] /= mag;
 }
 
-void			vec3_normalize(double vector[3], double result[3])
+void			vec3_normalize_s(double vector[3])
 {
 	double	mag;
 	int		i;
@@ -31,10 +31,10 @@ void			vec3_normalize(double vector[3], double result[3])
 	mag = vec3_magnitude(vector);
 	i = -1;
 	while (++i < 3)
-		result[i] = vector[i] / mag;
+		vector[i] /= mag;
 }
 
-void			vec2_normalize(double vector[2], double result[2])
+void			vec2_normalize_s(double vector[2])
 {
 	double	mag;
 	int		i;
@@ -42,5 +42,5 @@ void			vec2_normalize(double vector[2], double result[2])
 	mag = vec2_magnitude(vector);
 	i = -1;
 	while (++i < 2)
-		result[i] = vector[i] / mag;
+		vector[i] /= mag;
 }

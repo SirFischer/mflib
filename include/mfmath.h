@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/30 18:08:36 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/05/09 16:35:40 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,6 +80,10 @@ double			vec2_magnitude(double vector[2]);
 void			vec4_normalize(double vector[4], double result[4]);
 void			vec3_normalize(double vector[3], double result[3]);
 void			vec2_normalize(double vector[2], double result[2]);
+
+void			vec4_normalize_s(double vector[4]);
+void			vec3_normalize_s(double vector[3]);
+void			vec2_normalize_s(double vector[2]);
 
 double			vec4_dot(double vec[4], double vec2[4]);
 double			vec3_dot(double vec[3], double vec2[3]);
