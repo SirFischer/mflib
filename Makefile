@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/05/17 16:28:58 by mfischer         ###   ########.fr        #
+#    Updated: 2019/05/17 19:36:11 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,8 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/list/mf_lstnew.c \
 				src/list2/list2_at.c src/list2/list2_create.c src/list2/list2_destroy.c \
 				src/list2/list2_pop.c src/list2/list2_popback.c src/list2/list2_push.c \
-				src/list2/list2_pushback.c src/list2/list2_toarray.c \
+				src/list2/list2_pushback.c src/list2/list2_toarray.c src/list2/list2_delete.c \
+				src/list2/list2_insert.c \
 				src/memory/mf_memset.c src/memory/mf_bzero.c src/memory/mf_memalloc.c \
 				src/memory/mf_memcpy.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \

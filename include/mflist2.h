@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 13:17:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/25 00:52:17 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/05/17 19:32:24 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ typedef struct		s_list2
 t_list2				*list2_create();
 void				list2_push(t_list2 *list, void *data);
 void				list2_pushback(t_list2 *list, void *data);
+void				list2_insert(t_list2 *list, t_node *node, void *data);
+void				*list2_delete(t_list2 *list, t_node *node);
 void				*list2_pop(t_list2 *list);
 void				*list2_popback(t_list2	*list);
 void				*list2_at(t_list2 *list, int index);
