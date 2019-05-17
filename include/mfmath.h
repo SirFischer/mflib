@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/05/17 16:28:39 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/05/17 16:41:29 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,9 +112,9 @@ void			vec4vec4_substract(double minuend[4], double subtrahend[4], double differ
 void			vec3vec3_substract(double minuend[3], double subtrahend[3], double difference[3]);
 void			vec2vec2_substract(double minuend[2], double subtrahend[2], double difference[2]);
 
-void			vec4vec4_add(double minuend[4], double subtrahend[4], double difference[4]);
-void			vec3vec3_add(double minuend[3], double subtrahend[3], double difference[3]);
-void			vec2vec2_add(double minuend[2], double subtrahend[2], double difference[2]);
+void			vec4vec4_add(double addend[4], double augend[4], double summand[4]);
+void			vec3vec3_add(double addend[3], double augend[3], double summand[3]);
+void			vec2vec2_add(double addend[2], double augend[2], double summand[2]);
 
 void			vec4vec4_divide(double dividend[4], double divisor[4], double quotient[4]);
 void			vec3vec3_divide(double dividend[3], double divisor[3], double quotient[3]);
