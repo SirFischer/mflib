@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 19:27:14 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/20 10:03:52 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/05/18 14:12:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ size_t  mf_strlen(const char *s);
 char    *mf_strjoin(char const *s1, char const *s2);
 int		mf_atoi(const char *str);
 t_bool	mf_isspace(const char c);
+t_bool	mf_isdigit(const char c);
 char	*mf_strsub(char const *s, unsigned int start, size_t len);
 double	mf_atof(const char *str);
 

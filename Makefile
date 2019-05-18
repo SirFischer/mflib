@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/05/17 19:36:11 by mfischer         ###   ########.fr        #
+#    Updated: 2019/05/18 14:14:18 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/string/mf_strchr.c src/string/mf_strcpy.c src/string/mf_strclr.c \
 				src/string/mf_strdup.c src/string/mf_strlen.c src/string/mf_strjoin.c \
 				src/string/mf_atoi.c src/string/mf_isspace.c src/string/mf_strsub.c \
-				src/string/mf_atof.c \
+				src/string/mf_atof.c src/string/mf_isdigit.c \
 				src/files/get_next_line.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
