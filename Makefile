@@ -41,7 +41,11 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
 				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c \
 				src/stack/stack_reset.c \
-				src/var/mf_swap.c src/var/mf_min.c
+				src/var/mf_swap.c src/var/mf_min.c \
+				src/math/vec3d/cross.c \
+				src/math/vec3d/dot.c \
+				src/math/vec3d/normalize.c \
+				src/math/vec3d/sub.c \
 
 #
 
@@ -61,7 +65,7 @@ $(OBJS)		:	| obj
 
 obj			:	
 		@mkdir	-p $@
-		@mkdir	-p $@/math
+		@mkdir	-p $@/math/vec3d
 		@mkdir	-p $@/string
 		@mkdir	-p $@/files
 		@mkdir	-p $@/list
