@@ -14,6 +14,7 @@
 # define MYMATH_H
 
 #include <math.h>
+#include <math_types.h>
 
 typedef struct	s_intrect
 {
@@ -22,6 +23,15 @@ typedef struct	s_intrect
 	int			w;
 	int			h;
 }				t_intrect;
+
+/*
+** t_vec3d operations
+*/
+
+t_vec3d			vec3d_cross(t_vec3d a, t_vec3d b);
+double			vec3d_dot(t_vec3d a, t_vec3d b);
+t_vec3d			vec3d_normalize(t_vec3d v);
+t_vec3d			vec3d_sub(t_vec3d a, t_vec3d b);
 
 /*
 ** MATRIX OPERATIONS
