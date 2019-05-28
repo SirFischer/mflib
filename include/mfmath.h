@@ -32,6 +32,9 @@ t_vec3d			vec3d_cross(t_vec3d a, t_vec3d b);
 double			vec3d_dot(t_vec3d a, t_vec3d b);
 t_vec3d			vec3d_normalize(t_vec3d v);
 t_vec3d			vec3d_sub(t_vec3d a, t_vec3d b);
+t_vec3d			vec3d_add(t_vec3d a, t_vec3d b);
+double			vec3d_length(t_vec3d v);
+t_vec3d			vec3d_scalar_multiply(t_vec3d a, double s);
 
 /*
 ** MATRIX OPERATIONS

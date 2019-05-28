@@ -46,6 +46,9 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec3d/dot.c \
 				src/math/vec3d/normalize.c \
 				src/math/vec3d/sub.c \
+				src/math/vec3d/add.c \
+				src/math/vec3d/length.c \
+				src/math/vec3d/scalar_multiply.c
 
 #
 
