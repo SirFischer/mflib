@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/05/18 16:18:36 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/07 13:45:43 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,9 +114,9 @@ void			vec4scalar_add(double vec[4], double scalar, double res[4]);
 void			vec3scalar_add(double vec[3], double scalar, double res[3]);
 void			vec2scalar_add(double vec[2], double scalar, double res[2]);
 
-void	vec4scalar_divide(double vec[4], double scalar, double res[4]);
-void	vec3scalar_divide(double vec[3], double scalar, double res[3]);
-void	vec2scalar_divide(double vec[2], double scalar, double res[2]);
+void			vec4scalar_divide(double vec[4], double scalar, double res[4]);
+void			vec3scalar_divide(double vec[3], double scalar, double res[3]);
+void			vec2scalar_divide(double vec[2], double scalar, double res[2]);
 
 /*
 ** VECTOR & VECTOR OPERATIONS
@@ -146,4 +146,13 @@ void			mat4vec4_multiply(double mat[4][4], double vec[4], double res[4]);
 void			mat3vec3_multiply(double mat[3][3], double vec[3], double res[3]);
 void			mat2vec2_multiply(double mat[2][2], double vec[2], double res[2]);
 
+
+/*
+** 3D MATH FUNCS
+*/
+
+/*
+** returns shortest distance between point and plane. (normal must be normalized)
+*/
+double			dist_pointplane(double plane_n[3], double plane_p[3], double point[3]);
 #endif
