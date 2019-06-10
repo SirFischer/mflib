@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/07 13:45:43 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/10 19:50:10 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define MYMATH_H
 
 #include <math.h>
-#include <math_types.h>
+#include "math_types.h"
 
 typedef struct	s_intrect
 {
