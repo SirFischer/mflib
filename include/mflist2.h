@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/19 13:17:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/05/17 19:39:18 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/10 14:42:19 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,18 @@ typedef struct		s_list2
 }					t_list2;
 
 t_list2				*list2_create();
+
+/*
+** Adds element to front.
+** Returns 1 on success, otherwise 0.
+*/
 int					list2_push(t_list2 *list, void *data);
+
+/*
+** Adds element to back.
+** Use push if performance is critical.
+** Returns 1 on success, otherwise 0.
+*/
 int					list2_pushback(t_list2 *list, void *data);
 void				list2_insert(t_list2 *list, t_node *node, void *data);
 void				*list2_delete(t_list2 *list, t_node *node);
