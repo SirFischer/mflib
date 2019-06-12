@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 23:53:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 00:50:40 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 01:05:11 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static t_thread_worker	*thread_pool_init_worker(int worker_count,
 	i = -1;
 	while (++i < worker_count)
 	{
-		pthread_create(&workers[i], NULL, thread_pool_work, pool);
+		pthread_create(&workers[i], NULL, thread_pool_workers_work, pool);
 		workers[i].id = i;
 	}
 }
