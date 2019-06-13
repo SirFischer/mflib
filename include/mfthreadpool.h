@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 22:31:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 13:44:02 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 14:03:05 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,6 @@ typedef struct		s_thread_pool
 
 t_thread_pool		*thread_pool_init(int worker_count, int max_job_count);
 void				*thread_pool_workers_work(void *param);
-void				thread_pool_add_work(t_thread_pool *pool,
-											void (*f)(void *), void *param);
 int					init_work_pool(t_work_pool *pool, int max_job_count);
 void				thread_pool_push_work(t_thread_pool *pool, t_thread_pool_work work);
 t_thread_pool_work	work_pool_pop(t_thread_pool *pool);
