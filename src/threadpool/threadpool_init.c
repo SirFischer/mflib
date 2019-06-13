@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 23:53:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 12:14:09 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 13:35:31 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ t_thread_pool			*thread_pool_init(int worker_count, int max_job_count)
 	init_work_pool(&res->work_pool, max_job_count);
 	pthread_cond_init(&res->cnd_active, NULL);
 	pthread_mutex_init(&res->mtx_active, NULL);
+	pthread_cond_init(&res->cnd_wait, NULL);
+	pthread_mutex_init(&res->mtx_wait, NULL);
+	pthread_mutex_init(&res->mtx_work, NULL);
 	res->running = TRUE;
 	return (res);
 }

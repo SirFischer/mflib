@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/06/13 12:08:16 by mfischer         ###   ########.fr        #
+#    Updated: 2019/06/13 13:44:22 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec3d/scalar_multiply.c \
 				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
 				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
-				src/threadpool/threadpool_workers_work.c
+				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c
 
 #
 

@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:44:39 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/24 00:28:58 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 13:52:32 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,6 @@
 # include "include/mfmemory.h"
 # include "include/mfstack.h"
 # include "include/boolean.h"
+# include "mfthreadpool.h"
 
 #endif
