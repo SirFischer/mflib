@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 22:31:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 14:03:05 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 16:17:41 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,16 @@ typedef struct		s_work_pool
 
 typedef struct		s_thread_pool
 {
-	t_bool			running;
 	pthread_mutex_t	mtx_active;
 	pthread_cond_t	cnd_active;
 	pthread_mutex_t	mtx_wait;
 	pthread_cond_t	cnd_wait;
 	t_thread_worker	*workers;
 	pthread_mutex_t	mtx_work;
+	t_bool			work;
+	t_bool			wait;
 	t_work_pool		work_pool;
+	int				active_threads;
 }					t_thread_pool;
 
 t_thread_pool		*thread_pool_init(int worker_count, int max_job_count);
