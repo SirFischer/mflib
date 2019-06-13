@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 11:42:28 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 15:59:18 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/13 23:59:23 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,14 @@
 
 void		thread_pool_push_work(t_thread_pool *pool, t_thread_pool_work work)
 {
-	printf("mtx_work locked by work_push\n");
 	pthread_mutex_lock(&pool->mtx_work);
 	if (pool->work_pool.top < pool->work_pool.maxdata - 1)
 	{
 		pool->work_pool.data[++pool->work_pool.top] = work;
-		printf("mtx_active locked by work_push\n");
 		pthread_mutex_lock(&pool->mtx_active);
 		pool->work = TRUE;
 		pthread_cond_signal(&pool->cnd_active);
 		pthread_mutex_unlock(&pool->mtx_active);
-		printf("mtx_active unlocked by work_push\n");
 	}
 	pthread_mutex_unlock(&pool->mtx_work);
-	printf("mtx_work unlocked by work_push\n");
 }
