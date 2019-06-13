@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/06/12 23:52:24 by mfischer         ###   ########.fr        #
+#    Updated: 2019/06/13 12:08:16 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,10 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec3d/sub.c \
 				src/math/vec3d/add.c \
 				src/math/vec3d/length.c \
-				src/math/vec3d/scalar_multiply.c
+				src/math/vec3d/scalar_multiply.c \
+				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
+				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
+				src/threadpool/threadpool_workers_work.c
 
 #
 
@@ -76,6 +79,7 @@ obj			:
 		@mkdir	-p $@/memory
 		@mkdir	-p $@/stack
 		@mkdir	-p $@/var
+		@mkdir	-p $@/threadpool
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
