@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 22:31:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/13 16:17:41 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:50:49 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ typedef struct		s_thread_worker
 
 typedef struct		s_thread_pool_work
 {
+	int				id;
 	void			*param;
-	void			(*f)(void *);
+	void			(*f)(int, void *);
 }					t_thread_pool_work;
 
 typedef struct		s_work_pool
