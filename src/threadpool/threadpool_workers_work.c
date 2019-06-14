@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 00:29:34 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/14 11:51:39 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/14 12:00:45 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void	*thread_pool_workers_work(void *param)
 			work = work_pool_pop(pool);
 			pthread_mutex_unlock(&pool->mtx_work);
 			if (work.f != NULL)
-				work.f(work.id, work.param);
+				work.f(work.param, work.s_param);
 		}
 	}
 	return (NULL);

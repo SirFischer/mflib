@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/12 22:31:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/14 11:50:49 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/14 11:59:58 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,21 @@ typedef struct		s_thread_worker
 	pthread_t		thread;
 }					t_thread_worker;
 
+typedef union		u_stat_param
+{
+	int				i;
+	double			d;
+	float			f;
+	void			*p;
+	char			c;
+}					t_stat_param;
+
+
 typedef struct		s_thread_pool_work
 {
-	int				id;
+	t_stat_param	s_param;
 	void			*param;
-	void			(*f)(int, void *);
+	void			(*f)(void *, t_stat_param);
 }					t_thread_pool_work;
 
 typedef struct		s_work_pool
