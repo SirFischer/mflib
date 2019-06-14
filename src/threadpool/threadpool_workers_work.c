@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/13 00:29:34 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/14 00:04:38 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/14 09:39:30 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,20 @@ void	*thread_pool_workers_work(void *param)
 		pthread_mutex_lock(&pool->mtx_work);
 		if (pool->work_pool.top == -1)
 		{
+			pool->active_threads--;
 			pthread_mutex_unlock(&pool->mtx_work);
+			pthread_mutex_lock(&pool->mtx_wait);
+			if (pool->wait && pool->work_pool.top == -1 && !pool->active_threads)
+			{
+				pool->wait = FALSE;
+				pthread_cond_broadcast(&pool->cnd_wait);
+			}
+			pthread_mutex_unlock(&pool->mtx_wait);
 			pthread_mutex_lock(&pool->mtx_active);
 			while (!pool->work)
 				pthread_cond_wait(&pool->cnd_active, &pool->mtx_active);
 			pool->work = FALSE;
+			pool->active_threads++;
 			pthread_mutex_unlock(&pool->mtx_active);
 		}
 		else
