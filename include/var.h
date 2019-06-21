@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 23:40:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/12 23:52:01 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/21 20:17:18 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define VAR_H
 
 # include <stdlib.h>
+# include <stdint.h>
 # include <stdarg.h>
 
 int					mf_clamp_int(int value, int min, int max);
@@ -22,5 +23,6 @@ void				mf_swap_doubles(double *one, double *two, size_t n);
 void				mf_swap_int(int *one, int *two, size_t n);
 double				mf_min_double(int num, ...);
 int					mf_min_int(int num, ...);
+uint32_t			mf_wrap_around(uint32_t x, uint32_t N);
 
 #endif
