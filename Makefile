@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/06/13 14:02:53 by mfischer         ###   ########.fr        #
+#    Updated: 2019/06/21 20:23:17 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,8 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/stack/stack_create.c src/stack/stack_destroy.c src/stack/stack_pop.c \
 				src/stack/stack_push.c src/stack/stack_state.c src/stack/stack_top.c \
 				src/stack/stack_reset.c \
-				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c\
+				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c \
+				src/var/mf_wrap_around.c \
 				src/math/vec3d/cross.c \
 				src/math/vec3d/dot.c \
 				src/math/vec3d/normalize.c \

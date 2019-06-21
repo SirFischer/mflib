@@ -6,12 +6,13 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/21 20:15:12 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/21 20:17:27 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/21 20:22:18 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "var.h"
 
-uint32_t mf_wrap_around(uint32_t x, uint32_t N) {
+uint32_t	mf_wrap_around(uint32_t x, uint32_t N)
+{
   return ((uint64_t) x * (uint64_t) N) >> 32 ;
 }
