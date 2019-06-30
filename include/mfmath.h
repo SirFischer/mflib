@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/10 19:50:10 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/06/30 22:07:15 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,4 +155,9 @@ void			mat2vec2_multiply(double mat[2][2], double vec[2], double res[2]);
 ** returns shortest distance between point and plane. (normal must be normalized)
 */
 double			dist_pointplane(double plane_n[3], double plane_p[3], double point[3]);
+
+/*
+** Calculates the normal of three points in 3d space
+*/
+void			vec3p_get_normal(double p1[3], double p2[3], double p3[3], double res[3]);
 #endif
