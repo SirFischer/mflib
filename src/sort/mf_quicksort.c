@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 23:14:03 by mfischer          #+#    #+#             */
-/*   Updated: 2019/07/05 23:44:43 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/07/05 23:55:15 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static int	partition(int *arr, int low, int high)
 	pivot = arr[high];
 	i = low - 1;
 	j = low - 1;
-	while (++j <= high)
+	while (++j < high)
 	{
 		if (arr[j] <= pivot)
 		{
