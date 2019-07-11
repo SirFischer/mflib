@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/28 23:24:22 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/11 01:09:17 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/07/11 11:55:28 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,26 @@ void	mat4vec4_multiply(double mat[4][4], double vec[4], double res[4])
 	int i;
 	int j;
 	double tmp[4];
+	double *xpos;
+	double	*ypos;
 
 	i = -1;
-	vec4_clear(tmp);
+	tmp[0] = 0;
+	tmp[1] = 0;
+	tmp[2] = 0;
+	tmp[3] = 0;
+	ypos = &mat[0][0];
 	while (++i < 4)
 	{
+		xpos = vec;
 		j = -1;
 		while (++j < 4)
-		{
-			tmp[i] += mat[i][j] * vec[j];
-		}
+			tmp[i] += (*ypos++) * (*xpos++);
 	}
-	vec4_copy(res, tmp);
+	res[0] = tmp[0];
+	res[1] = tmp[1];
+	res[2] = tmp[2];
+	res[3] = tmp[3];
 }
 
 void	mat3vec3_multiply(double mat[3][3], double vec[3], double res[3])
