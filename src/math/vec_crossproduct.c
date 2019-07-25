@@ -12,9 +12,18 @@
 
 #include "mfmath.h"
 
-void	vec3vec3_crossproduct(double v1[3], double v2[3], double result[3])
+t_vec4d	vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2)
 {
-	result[0] = (v1[1] * v2[2]) - (v1[2] * v2[1]);
-	result[1] = (v1[2] * v2[0]) - (v1[0] * v2[2]);
-	result[2] = (v1[0] * v2[1]) - (v1[1] * v2[0]);
+	return ((t_vec4d){.a = {
+		(v1.a[1] * v2.a[2]) - (v1.a[2] * v2.a[1]),
+		(v1.a[2] * v2.a[0]) - (v1.a[0] * v2.a[2]),
+		(v1.a[0] * v2.a[1]) - (v1.a[1] * v2.a[0]), 0.0}});
+}
+
+t_vec3d	vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2)
+{
+	return ((t_vec3d){.a = {
+		(v1.a[1] * v2.a[2]) - (v1.a[2] * v2.a[1]),
+		(v1.a[2] * v2.a[0]) - (v1.a[0] * v2.a[2]),
+		(v1.a[0] * v2.a[1]) - (v1.a[1] * v2.a[0])}});
 }

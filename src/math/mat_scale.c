@@ -12,27 +12,23 @@
 
 #include "mfmath.h"
 
-void		mat4_scale(double mat[4][4], double x, double y, double z)
+t_mat4d		mat4_scale(t_mat4d mat, double x, double y, double z)
 {
-	double tmp[4][4];
-	double res[4][4];
+	t_mat4d tmp;
 
-	mat4_init(tmp);
-	mat[0][0] *= x;
-	mat[1][1] *= y;
-	mat[2][2] *= z;
-	mat4mat4_multiply(mat, tmp, res);
-	mat4_copy(mat, res);
+	mat4_init(&tmp);
+	mat.a[0][0] *= x;
+	mat.a[1][1] *= y;
+	mat.a[2][2] *= z;
+	return (mat4mat4_multiply(mat, tmp));
 }
 
-void		mat3_scale(double mat[3][3], double x, double y)
+t_mat3d		mat3_scale(t_mat3d mat, double x, double y)
 {
-	double tmp[3][3];
-	double res[3][3];
+	t_mat3d tmp;
 
-	mat3_init(tmp);
-	mat[0][0] *= x;
-	mat[1][1] *= y;
-	mat3mat3_multiply(mat, tmp, res);
-	mat3_copy(mat, res);
+	mat3_init(&tmp);
+	mat.a[0][0] *= x;
+	mat.a[1][1] *= y;
+	return (mat3mat3_multiply(mat, tmp));
 }

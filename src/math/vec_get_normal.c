@@ -12,13 +12,8 @@
 
 #include "mfmath.h"
 
-void		vec3p_get_normal(double p1[3], double p2[3], double p3[3], double res[3])
+t_vec3d	vec3p_get_normal(t_vec3d p1, t_vec3d p2, t_vec3d p3)
 {
-	double tmp1[3];
-	double tmp2[3];
-
-	vec3vec3_substract(p2, p1, tmp1);
-	vec3vec3_substract(p3, p1, tmp2);
-	vec3vec3_crossproduct(tmp1, tmp2, res);
-	vec3_normalize_s(res);
+	return (vec3_normalize(vec3vec3_crossproduct(vec3vec3_substract(p2, p1),
+		vec3vec3_substract(p3, p1))));
 }

@@ -12,15 +12,15 @@
 
 #include "mfmath.h"
 
-void	mat4mat4_multiply(	double mat1[4][4],
-							double mat2[4][4], double res[4][4])
+t_mat4d	mat4mat4_multiply(t_mat4d mat1, t_mat4d mat2)
 {
-	int i;
-	int j;
-	int k;
+	int		i;
+	int		j;
+	int		k;
+	t_mat4d	out;
 
 	i = -1;
-	mat4_clear(res);
+	mat4_clear(&out);
 	while (++i < 4)
 	{
 		j = -1;
@@ -28,20 +28,21 @@ void	mat4mat4_multiply(	double mat1[4][4],
 		{
 			k = -1;
 			while (++k < 4)
-				res[i][j] += mat1[i][k] * mat2[k][j];
+				out.a[i][j] += mat1.a[i][k] * mat2.a[k][j];
 		}
 	}
+	return (out);
 }
 
-void	mat3mat3_multiply(	double mat1[3][3],
-							double mat2[3][3], double res[3][3])
+t_mat3d	mat3mat3_multiply(t_mat3d mat1, t_mat3d mat2)
 {
-	int i;
-	int j;
-	int k;
+	int		i;
+	int		j;
+	int		k;
+	t_mat3d	out;
 
 	i = -1;
-	mat3_clear(res);
+	mat3_clear(&out);
 	while (++i < 3)
 	{
 		j = -1;
@@ -49,20 +50,21 @@ void	mat3mat3_multiply(	double mat1[3][3],
 		{
 			k = -1;
 			while (++k < 3)
-				res[i][j] += mat1[i][k] * mat2[k][j];
+				out.a[i][j] += mat1.a[i][k] * mat2.a[k][j];
 		}
 	}
+	return (out);
 }
 
-void	mat2mat2_multiply(	double mat1[2][2],
-							double mat2[2][2], double res[2][2])
+t_mat2d	mat2mat2_multiply(t_mat2d mat1, t_mat2d mat2)
 {
-	int i;
-	int j;
-	int k;
+	int		i;
+	int		j;
+	int		k;
+	t_mat2d	out;
 
 	i = -1;
-	mat2_clear(res);
+	mat2_clear(&out);
 	while (++i < 2)
 	{
 		j = -1;
@@ -70,7 +72,8 @@ void	mat2mat2_multiply(	double mat1[2][2],
 		{
 			k = -1;
 			while (++k < 2)
-				res[i][j] += mat1[i][k] * mat2[k][j];
+				out.a[i][j] += mat1.a[i][k] * mat2.a[k][j];
 		}
 	}
+	return (out);
 }

@@ -12,23 +12,26 @@
 
 #include "mfmath.h"
 
-void	vec4scalar_divide(double vec[4], double scalar, double res[4])
+t_vec4d	vec4scalar_divide(t_vec4d vec, double scalar)
 {
-	res[0] = vec[0] / scalar;
-	res[1] = vec[1] / scalar;
-	res[2] = vec[2] / scalar;
-	res[3] = vec[3] / scalar;
+	vec.n.x /= scalar;
+	vec.n.y /= scalar;
+	vec.n.z /= scalar;
+	vec.n.w /= scalar;
+	return (vec);
 }
 
-void	vec3scalar_divide(double vec[3], double scalar, double res[3])
+t_vec3d	vec3scalar_divide(t_vec3d vec, double scalar)
 {
-	res[0] = vec[0] / scalar;
-	res[1] = vec[1] / scalar;
-	res[2] = vec[2] / scalar;
+	vec.n.x /= scalar;
+	vec.n.y /= scalar;
+	vec.n.z /= scalar;
+	return (vec);
 }
 
-void	vec2scalar_divide(double vec[2], double scalar, double res[2])
+t_vec2d	vec2scalar_divide(t_vec2d vec, double scalar)
 {
-	res[0] = vec[0] / scalar;
-	res[1] = vec[1] / scalar;
+	vec.n.x /= scalar;
+	vec.n.y /= scalar;
+	return (vec);
 }

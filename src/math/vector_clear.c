@@ -12,23 +12,23 @@
 
 #include "mfmath.h"
 
-void		vec4_clear(double vec[4])
+void		vec4_clear(t_vec4d *vec)
 {
-	vec[0] = 0;
-	vec[1] = 0;
-	vec[2] = 0;
-	vec[3] = 0;
+	vec->n.x = 0;
+	vec->n.y = 0;
+	vec->n.z = 0;
+	vec->n.w = 0;
 }
 
-void		vec3_clear(double vec[3])
+void		vec3_clear(t_vec3d *vec)
 {
-	vec[0] = 0;
-	vec[1] = 0;
-	vec[2] = 0;
+	vec->n.x = 0;
+	vec->n.y = 0;
+	vec->n.z = 0;
 }
 
-void		vec2_clear(double vec[2])
+void		vec2_clear(t_vec2d *vec)
 {
-	vec[0] = 0;
-	vec[1] = 0;
+	vec->n.x = 0;
+	vec->n.y = 0;
 }

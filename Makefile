@@ -15,14 +15,14 @@ NAME		=	mflib.a
 #
 
 INC_PATH	=	include/
-SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
+SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
 				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
 				src/math/vec_normalize.c src/math/vec_substract.c src/math/vector_clear.c \
-				src/math/vector_init.c src/math/mat4_rotate.c src/math/vec_copy.c \
+				src/math/vector_init.c src/math/mat4_rotate.c \
 				src/math/vecscalar_multiply.c src/math/vecscalar_add.c src/math/vecscalar_divide.c \
-				src/math/vec_normalize_s.c src/math/vec_divide.c src/math/dist_pointplane.c \
+				src/math/vec_divide.c src/math/dist_pointplane.c \
 				src/math/vec_get_normal.c \
 				src/string/mf_itoa.c src/string/mf_itoa_s.c src/string/mf_strnew.c \
 				src/string/mf_strchr.c src/string/mf_strcpy.c src/string/mf_strclr.c \
@@ -44,13 +44,6 @@ SRCS		=	src/math/mat_copy.c src/math/mat_scale.c src/math/mat_translate.c \
 				src/stack/stack_reset.c src/stack/stack_next_to_top.c \
 				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c \
 				src/var/mf_wrap_around.c \
-				src/math/vec3d/cross.c \
-				src/math/vec3d/dot.c \
-				src/math/vec3d/normalize.c \
-				src/math/vec3d/sub.c \
-				src/math/vec3d/add.c \
-				src/math/vec3d/length.c \
-				src/math/vec3d/scalar_multiply.c \
 				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
 				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
 				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \

@@ -12,29 +12,26 @@
 
 #include "mfmath.h"
 
-void			vec4vec4_substract(double minuend[4], double subtrahend[4], double difference[4])
+t_vec4d	vec4vec4_substract(t_vec4d minuend, t_vec4d subtrahend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 4)
-		difference[i] = minuend[i] - subtrahend[i];
+	return ((t_vec4d){.n = {
+		.x = minuend.n.x - subtrahend.n.x,
+		.y = minuend.n.y - subtrahend.n.y,
+		.z = minuend.n.z - subtrahend.n.z,
+		.w = minuend.n.w - subtrahend.n.w}});
 }
 
-void			vec3vec3_substract(double minuend[3], double subtrahend[3], double difference[3])
+t_vec3d	vec3vec3_substract(t_vec3d minuend, t_vec3d subtrahend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 3)
-		difference[i] = minuend[i] - subtrahend[i];
+	return ((t_vec3d){.n = {
+		.x = minuend.n.x - subtrahend.n.x,
+		.y = minuend.n.y - subtrahend.n.y,
+		.z = minuend.n.z - subtrahend.n.z}});
 }
 
-void			vec2vec2_substract(double minuend[2], double subtrahend[2], double difference[2])
+t_vec2d	vec2vec2_substract(t_vec2d minuend, t_vec2d subtrahend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 2)
-		difference[i] = minuend[i] - subtrahend[i];
+	return ((t_vec2d){.n = {
+		.x = minuend.n.x - subtrahend.n.x,
+		.y = minuend.n.y - subtrahend.n.y}});
 }

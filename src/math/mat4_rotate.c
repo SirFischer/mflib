@@ -12,66 +12,58 @@
 
 #include "mfmath.h"
 
-void	mat4_rotate_yaw(double mat[4][4], double angle)
+t_mat4d	mat4_rotate_yaw(t_mat4d mat, double angle)
 {
-	double tmp[4][4];
-	double res[4][4];
+	t_mat4d tmp;
 	double new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
-	mat4_init(tmp);
-	tmp[1][1] = cos(new_angle);
-	tmp[1][2] = -sin(new_angle);
-	tmp[2][1] = sin(new_angle);
-	tmp[2][2] = cos(new_angle);
-	mat4mat4_multiply(mat, tmp, res);
-	mat4_copy(mat, res);
+	mat4_init(&tmp);
+	tmp.a[1][1] = cos(new_angle);
+	tmp.a[1][2] = -sin(new_angle);
+	tmp.a[2][1] = sin(new_angle);
+	tmp.a[2][2] = cos(new_angle);
+	return (mat4mat4_multiply(mat, tmp));
 }
 
-void	mat4_rotate_pitch(double mat[4][4], double angle)
+t_mat4d	mat4_rotate_pitch(t_mat4d mat, double angle)
 {
-	double tmp[4][4];
-	double res[4][4];
+	t_mat4d tmp;
 	double new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
-	mat4_init(tmp);
-	tmp[0][0] = cos(new_angle);
-	tmp[2][0] = -sin(new_angle);
-	tmp[0][2] = sin(new_angle);
-	tmp[2][2] = cos(new_angle);
-	mat4mat4_multiply(mat, tmp, res);
-	mat4_copy(mat, res);
+	mat4_init(&tmp);
+	tmp.a[0][0] = cos(new_angle);
+	tmp.a[2][0] = -sin(new_angle);
+	tmp.a[0][2] = sin(new_angle);
+	tmp.a[2][2] = cos(new_angle);
+	return (mat4mat4_multiply(mat, tmp));
 }
 
-void	mat4_rotate_roll(double mat[4][4], double angle)
+t_mat4d	mat4_rotate_roll(t_mat4d mat, double angle)
 {
-	double tmp[4][4];
-	double res[4][4];
+	t_mat4d tmp;
 	double new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
-	mat4_init(tmp);
-	tmp[0][0] = cos(new_angle);
-	tmp[0][1] = -sin(new_angle);
-	tmp[1][0] = sin(new_angle);
-	tmp[1][1] = cos(new_angle);
-	mat4mat4_multiply(mat, tmp, res);
-	mat4_copy(mat, res);
+	mat4_init(&tmp);
+	tmp.a[0][0] = cos(new_angle);
+	tmp.a[0][1] = -sin(new_angle);
+	tmp.a[1][0] = sin(new_angle);
+	tmp.a[1][1] = cos(new_angle);
+	return (mat4mat4_multiply(mat, tmp));
 }
 
-void	mat3_rotate(double mat[3][3], double angle)
+t_mat3d	mat3_rotate(t_mat3d mat, double angle)
 {
-	double tmp[3][3];
-	double res[3][3];
+	t_mat3d tmp;
 	double new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
-	mat3_init(tmp);
-	tmp[0][0] = cos(new_angle);
-	tmp[0][1] = -sin(new_angle);
-	tmp[1][0] = sin(new_angle);
-	tmp[1][1] = cos(new_angle);
-	mat3mat3_multiply(mat, tmp, res);
-	mat3_copy(mat, res);
+	mat3_init(&tmp);
+	tmp.a[0][0] = cos(new_angle);
+	tmp.a[0][1] = -sin(new_angle);
+	tmp.a[1][0] = sin(new_angle);
+	tmp.a[1][1] = cos(new_angle);
+	return (mat3mat3_multiply(mat, tmp));
 }
