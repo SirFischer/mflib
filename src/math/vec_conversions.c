@@ -12,10 +12,7 @@
 
 #include "mfmath.h"
 
-void	vec3vec4_convert(double vec[3], double res[4])
+t_vec4d	vec3vec4_convert(t_vec3d vec)
 {
-	vec4_init(res);
-	res[0] = vec[0];
-	res[1] = vec[1];
-	res[2] = vec[2];
+	return ((t_vec4d){.a = {vec.n.x, vec.n.y, vec.n.z, 0.0}});
 }

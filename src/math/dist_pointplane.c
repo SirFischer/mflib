@@ -12,9 +12,7 @@
 
 #include "mfmath.h"
 
-double		dist_pointplane(double plane_n[3], double plane_p[3], double point[3])
+double		dist_pointplane(t_vec3d plane_n, t_vec3d plane_p, t_vec3d point)
 {
-	double tmp[3];
-	vec3vec3_substract(point, plane_p, tmp);
-	return (vec3_dot(tmp, plane_n));
+	return (vec3_dot(vec3vec3_substract(point, plane_p), plane_n));
 }

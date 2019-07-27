@@ -12,35 +12,17 @@
 
 #include "mfmath.h"
 
-void			vec4_normalize(double vector[4], double result[4])
+t_vec4d	vec4_normalize(t_vec4d vector)
 {
-	double	mag;
-	int		i;
-
-	mag = vec4_magnitude(vector);
-	i = -1;
-	while (++i < 4)
-		result[i] = vector[i] / mag;
+	return (vec4scalar_divide(vector, vec4_magnitude(vector)));
 }
 
-void			vec3_normalize(double vector[3], double result[3])
+t_vec3d	vec3_normalize(t_vec3d vector)
 {
-	double	mag;
-	int		i;
-
-	mag = vec3_magnitude(vector);
-	i = -1;
-	while (++i < 3)
-		result[i] = vector[i] / mag;
+	return (vec3scalar_divide(vector, vec3_magnitude(vector)));
 }
 
-void			vec2_normalize(double vector[2], double result[2])
+t_vec2d	vec2_normalize(t_vec2d vector)
 {
-	double	mag;
-	int		i;
-
-	mag = vec2_magnitude(vector);
-	i = -1;
-	while (++i < 2)
-		result[i] = vector[i] / mag;
+	return (vec2scalar_divide(vector, vec2_magnitude(vector)));
 }

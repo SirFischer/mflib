@@ -12,30 +12,23 @@
 
 #include "mfmath.h"
 
-void			vec4vec4_add(double addend[4], double augend[4], double summand[4])
+t_vec4d			vec4vec4_add(t_vec4d addend, t_vec4d augend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 4)
-		summand[i] = addend[i] + augend[i];
+	return ((t_vec4d){.n = {.x = addend.n.x + augend.n.x,
+							.y = addend.n.y + augend.n.y,
+							.z = addend.n.z + augend.n.z,
+							.w = addend.n.w + augend.n.w}});
 }
 
-void			vec3vec3_add(double addend[3], double augend[3], double summand[3])
+t_vec3d			vec3vec3_add(t_vec3d addend, t_vec3d augend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 3)
-		summand[i] = addend[i] + augend[i];
+	return ((t_vec3d){.n = {.x = addend.n.x + augend.n.x,
+		.y = addend.n.y + augend.n.y,
+		.z = addend.n.z + augend.n.z}});
 }
 
-void			vec2vec2_add(double addend[2], double augend[2], double summand[2])
+t_vec2d			vec2vec2_add(t_vec2d addend, t_vec2d augend)
 {
-	int i;
-
-	i = -1;
-	while (++i < 2)
-		summand[i] = addend[i] + augend[i];
+	return ((t_vec2d){.n = {.x = addend.n.x + augend.n.x,
+		.y = addend.n.y + augend.n.y}});
 }
-

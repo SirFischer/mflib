@@ -12,19 +12,19 @@
 
 #include "mfmath.h"
 
-double			vec4_magnitude(double vector[4])
+double	vec4_magnitude(t_vec4d vector)
 {
-	return (sqrt((vector[0] * vector[0]) + (vector[1] * vector[1]) + (vector[2]
-	* vector[2]) + (vector[3] * vector[3])));
+	return (sqrt((vector.n.x * vector.n.x) + (vector.n.y * vector.n.y)
+			+ (vector.n.z * vector.n.z) + (vector.n.w * vector.n.w)));
 }
 
-double			vec3_magnitude(double vector[3])
+double	vec3_magnitude(t_vec3d vector)
 {
-	return (sqrt((vector[0] * vector[0]) + (vector[1] * vector[1]) + (vector[2]
-	* vector[2])));
+	return (sqrt((vector.n.x * vector.n.x) + (vector.n.y * vector.n.y)
+			+ (vector.n.z * vector.n.z)));
 }
 
-double			vec2_magnitude(double vector[2])
+double	vec2_magnitude(t_vec2d vector)
 {
-	return (sqrt((vector[0] * vector[0]) + (vector[1] * vector[1])));
+	return (sqrt((vector.n.x * vector.n.x) + (vector.n.y * vector.n.y)));
 }

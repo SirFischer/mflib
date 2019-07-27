@@ -25,126 +25,101 @@ typedef struct	s_intrect
 }				t_intrect;
 
 /*
-** t_vec3d operations
-*/
-
-t_vec3d			vec3d_cross(t_vec3d a, t_vec3d b);
-double			vec3d_dot(t_vec3d a, t_vec3d b);
-t_vec3d			vec3d_normalize(t_vec3d v);
-t_vec3d			vec3d_sub(t_vec3d a, t_vec3d b);
-t_vec3d			vec3d_add(t_vec3d a, t_vec3d b);
-double			vec3d_length(t_vec3d v);
-t_vec3d			vec3d_scalar_multiply(t_vec3d a, double s);
-
-/*
 ** MATRIX OPERATIONS
 */
 
-void			mat4_init(double mat[4][4]);
-void			mat3_init(double mat[3][3]);
-void			mat2_init(double mat[2][2]);
+void			mat4_init(t_mat4d *mat);
+void			mat3_init(t_mat3d *mat);
+void			mat2_init(t_mat2d *mat);
 
-void			mat4_clear(double mat[4][4]);
-void			mat3_clear(double mat[3][3]);
-void			mat2_clear(double mat[2][2]);
+void			mat4_clear(t_mat4d *mat);
+void			mat3_clear(t_mat3d *mat);
+void			mat2_clear(t_mat2d *mat);
 
-void			mat4_copy(double dest[4][4], double src[4][4]);
-void			mat3_copy(double dest[3][3], double src[3][3]);
+t_mat4d			mat4_translate(t_mat4d mat, double x, double y, double z);
+t_mat3d			mat3_translate(t_mat3d mat, double x, double y);
 
-void			mat4_translate(double mat[4][4], double x, double y, double z);
-void			mat3_translate(double mat[3][3], double x, double y);
+t_mat4d			mat4_scale(t_mat4d mat, double x, double y, double z);
+t_mat3d			mat3_scale(t_mat3d mat, double x, double y);
 
-void			mat4_scale(double mat[4][4], double x, double y, double z);
-void			mat3_scale(double mat[3][3], double x, double y);
+t_mat4d			mat4_rotate_yaw(t_mat4d mat, double angle);
+t_mat4d			mat4_rotate_pitch(t_mat4d mat, double angle);
+t_mat4d			mat4_rotate_roll(t_mat4d mat, double angle);
 
-void			mat4_rotate_yaw(double mat[4][4], double angle);
-void			mat4_rotate_pitch(double mat[4][4], double angle);
-void			mat4_rotate_roll(double mat[4][4], double angle);
-
-void			mat3_rotate(double mat[3][3], double angle);
+t_mat3d			mat3_rotate(t_mat3d mat, double angle);
 
 /*
 ** MATRIX & MATRIX OPERATIONS
 */
 
-void			mat4mat4_multiply(	double mat1[4][4],
-									double mat2[4][4], double res[4][4]);
-void			mat3mat3_multiply(	double mat1[3][3],
-									double mat2[3][3], double res[3][3]);
-void			mat2mat2_multiply(	double mat1[2][2],
-									double mat2[2][2], double res[2][2]);
+t_mat4d			mat4mat4_multiply(t_mat4d mat1, t_mat4d mat2);
+t_mat3d			mat3mat3_multiply(t_mat3d mat1, t_mat3d mat2);
+t_mat2d			mat2mat2_multiply(t_mat2d mat1, t_mat2d mat2);
 
 /*
 ** VECTOR OPERATIONS
 */
 
-void			vec4_init(double vec[4]);
-void			vec3_init(double vec[3]);
-void			vec2_init(double vec[2]);
+void			vec4_init(t_vec4d *vec);
+void			vec3_init(t_vec3d *vec);
+void			vec2_init(t_vec2d *vec);
 
-void			vec4_clear(double vec[4]);
-void			vec3_clear(double vec[3]);
-void			vec2_clear(double vec[2]);
+void			vec4_clear(t_vec4d *vec);
+void			vec3_clear(t_vec3d *vec);
+void			vec2_clear(t_vec2d *vec);
 
-double			vec4_magnitude(double vector[4]);
-double			vec3_magnitude(double vector[3]);
-double			vec2_magnitude(double vector[2]);
+double			vec4_magnitude(t_vec4d vector);
+double			vec3_magnitude(t_vec3d vector);
+double			vec2_magnitude(t_vec2d vector);
 
-void			vec4_normalize(double vector[4], double result[4]);
-void			vec3_normalize(double vector[3], double result[3]);
-void			vec2_normalize(double vector[2], double result[2]);
+t_vec4d			vec4_normalize(t_vec4d vector);
+t_vec3d			vec3_normalize(t_vec3d vector);
+t_vec2d			vec2_normalize(t_vec2d vector);
 
-void			vec4_normalize_s(double vector[4]);
-void			vec3_normalize_s(double vector[3]);
-void			vec2_normalize_s(double vector[2]);
+double			vec4_dot(t_vec4d vec, t_vec4d vec2);
+double			vec3_dot(t_vec3d vec, t_vec3d vec2);
+double			vec2_dot(t_vec2d vec, t_vec2d vec2);
 
-double			vec4_dot(double vec[4], double vec2[4]);
-double			vec3_dot(double vec[3], double vec2[3]);
-double			vec2_dot(double vec[2], double vec2[2]);
+t_vec4d			vec4scalar_multiply(t_vec4d vec, double scalar);
+t_vec3d			vec3scalar_multiply(t_vec3d vec, double scalar);
+t_vec2d			vec2scalar_multiply(t_vec2d vec, double scalar);
 
-void			vec4_copy(double dest[4], double src[4]);
-void			vec3_copy(double dest[3], double src[3]);
-void			vec2_copy(double dest[2], double src[2]);
+t_vec4d			vec4scalar_add(t_vec4d vec, double scalar);
+t_vec3d			vec3scalar_add(t_vec3d vec, double scalar);
+t_vec2d			vec2scalar_add(t_vec2d vec, double scalar);
 
-void			vec4scalar_multiply(double vec[4], double scalar, double res[4]);
-void			vec3scalar_multiply(double vec[3], double scalar, double res[3]);
-void			vec2scalar_multiply(double vec[2], double scalar, double res[2]);
-
-void			vec4scalar_add(double vec[4], double scalar, double res[4]);
-void			vec3scalar_add(double vec[3], double scalar, double res[3]);
-void			vec2scalar_add(double vec[2], double scalar, double res[2]);
-
-void			vec4scalar_divide(double vec[4], double scalar, double res[4]);
-void			vec3scalar_divide(double vec[3], double scalar, double res[3]);
-void			vec2scalar_divide(double vec[2], double scalar, double res[2]);
+t_vec4d			vec4scalar_divide(t_vec4d vec, double scalar);
+t_vec3d			vec3scalar_divide(t_vec3d vec, double scalar);
+t_vec2d			vec2scalar_divide(t_vec2d vec, double scalar);
 
 /*
 ** VECTOR & VECTOR OPERATIONS
 */
 
-void			vec4vec4_substract(double minuend[4], double subtrahend[4], double difference[4]);
-void			vec3vec3_substract(double minuend[3], double subtrahend[3], double difference[3]);
-void			vec2vec2_substract(double minuend[2], double subtrahend[2], double difference[2]);
+t_vec4d			vec4vec4_substract(t_vec4d minuend, t_vec4d subtrahend);
+t_vec3d			vec3vec3_substract(t_vec3d minuend, t_vec3d subtrahend);
+t_vec2d			vec2vec2_substract(t_vec2d minuend, t_vec2d subtrahend);
 
-void			vec4vec4_add(double addend[4], double augend[4], double summand[4]);
-void			vec3vec3_add(double addend[3], double augend[3], double summand[3]);
-void			vec2vec2_add(double addend[2], double augend[2], double summand[2]);
+t_vec4d			vec4vec4_add(t_vec4d addend, t_vec4d augend);
+t_vec3d			vec3vec3_add(t_vec3d addend, t_vec3d augend);
+t_vec2d			vec2vec2_add(t_vec2d addend, t_vec2d augend);
 
-void			vec4vec4_divide(double dividend[4], double divisor[4], double quotient[4]);
-void			vec3vec3_divide(double dividend[3], double divisor[3], double quotient[3]);
-void			vec2vec2_divide(double dividend[2], double divisor[2], double quotient[2]);
+t_vec4d			vec4vec4_divide(t_vec4d dividend, t_vec4d divisor);
+t_vec3d			vec3vec3_divide(t_vec3d dividend, t_vec3d divisor);
+t_vec2d			vec2vec2_divide(t_vec2d dividend, t_vec2d divisor);
 
-void			vec3vec3_crossproduct(double v1[3], double v2[3], double result[3]);
+t_vec4d			vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2);
+t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
 
-void			vec3vec4_convert(double vec[3], double res[4]);
+t_vec4d			vec3vec4_convert(t_vec3d vec);
 
 /*
 ** MATRIX & VECTOR OPERATIONS
 */
 
-void			mat4vec4_multiply(double mat[4][4], double vec[4], double res[4]);
-void			mat3vec3_multiply(double mat[3][3], double vec[3], double res[3]);
-void			mat2vec2_multiply(double mat[2][2], double vec[2], double res[2]);
+t_vec4d			mat4vec4_multiply(t_mat4d mat, t_vec4d vec);
+t_vec3d			mat3vec3_multiply(t_mat3d mat, t_vec3d vec);
+t_vec2d			mat2vec2_multiply(t_mat2d mat, t_vec2d vec);
 
 
 /*
@@ -152,12 +127,15 @@ void			mat2vec2_multiply(double mat[2][2], double vec[2], double res[2]);
 */
 
 /*
-** returns shortest distance between point and plane. (normal must be normalized)
+** returns shortest distance between point and plane.(normal must be normalized)
 */
-double			dist_pointplane(double plane_n[3], double plane_p[3], double point[3]);
+
+double			dist_pointplane(t_vec3d plane_n, t_vec3d plane_p, t_vec3d point);
 
 /*
 ** Calculates the normal of three points in 3d space
 */
-void			vec3p_get_normal(double p1[3], double p2[3], double p3[3], double res[3]);
+
+t_vec3d			vec3p_get_normal(t_vec3d p1, t_vec3d p2, t_vec3d p3);
+
 #endif

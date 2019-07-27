@@ -12,29 +12,26 @@
 
 #include "mfmath.h"
 
-void			vec4vec4_divide(double dividend[4], double divisor[4], double quotient[4])
+t_vec4d	vec4vec4_divide(t_vec4d dividend, t_vec4d divisor)
 {
-	int i;
-
-	i = -1;
-	while (++i < 4)
-		quotient[i] = dividend[i] / divisor[i];
+	return ((t_vec4d){.a = {
+		dividend.n.x / divisor.n.x,
+		dividend.n.y / divisor.n.y,
+		dividend.n.z / divisor.n.z,
+		dividend.n.w / divisor.n.w}});
 }
 
-void			vec3vec3_divide(double dividend[3], double divisor[3], double quotient[3])
+t_vec3d	vec3vec3_divide(t_vec3d dividend, t_vec3d divisor)
 {
-	int i;
-
-	i = -1;
-	while (++i < 3)
-		quotient[i] = dividend[i] / divisor[i];
+	return ((t_vec3d){.a = {
+		dividend.n.x / divisor.n.x,
+		dividend.n.y / divisor.n.y,
+		dividend.n.z / divisor.n.z}});
 }
 
-void			vec2vec2_divide(double dividend[2], double divisor[2], double quotient[2])
+t_vec2d	vec2vec2_divide(t_vec2d dividend, t_vec2d divisor)
 {
-	int i;
-
-	i = -1;
-	while (++i < 2)
-		quotient[i] = dividend[i] / divisor[i];
+	return ((t_vec2d){.a = {
+		dividend.n.x / divisor.n.x,
+		dividend.n.y / divisor.n.y}});
 }

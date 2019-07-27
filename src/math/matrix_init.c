@@ -12,7 +12,7 @@
 
 #include "mfmath.h"
 
-void			mat4_init(double mat[4][4])
+void			mat4_init(t_mat4d *mat)
 {
 	int i;
 	int j;
@@ -22,11 +22,11 @@ void			mat4_init(double mat[4][4])
 	{
 		j = -1;
 		while (++j < 4)
-			mat[i][j] = (i == j) ? 1 : 0;
+			mat->a[i][j] = (i == j) ? 1 : 0;
 	}
 }
 
-void			mat3_init(double mat[3][3])
+void			mat3_init(t_mat3d *mat)
 {
 	int i;
 	int j;
@@ -36,14 +36,14 @@ void			mat3_init(double mat[3][3])
 	{
 		j = -1;
 		while (++j < 3)
-			mat[i][j] = (i == j) ? 1 : 0;
+			mat->a[i][j] = (i == j) ? 1 : 0;
 	}
 }
 
-void			mat2_init(double mat[2][2])
+void			mat2_init(t_mat2d *mat)
 {
-	mat[0][0] = 1;
-	mat[0][1] = 0;
-	mat[1][0] = 0;
-	mat[1][1] = 1;
+	mat->a[0][0] = 1;
+	mat->a[0][1] = 0;
+	mat->a[1][0] = 0;
+	mat->a[1][1] = 1;
 }
