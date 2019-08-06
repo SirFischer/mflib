@@ -138,4 +138,18 @@ double			dist_pointplane(t_vec3d plane_n, t_vec3d plane_p, t_vec3d point);
 
 t_vec3d			vec3p_get_normal(t_vec3d p1, t_vec3d p2, t_vec3d p3);
 
+/*
+** QUATERNIONS
+*/
+
+t_vec4d			quat_rotator(t_vec3d axis, double rad);
+
+t_vec4d			quat_multiply(t_vec4d q1, t_vec4d q2);
+
+t_vec4d			quat_inverse(t_vec4d q);
+
+t_mat3d			quat_to_mat3d(t_vec4d q);
+
+t_mat4d			quat_to_mat4d(t_vec4d q);
+
 #endif

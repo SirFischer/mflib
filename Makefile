@@ -14,7 +14,7 @@ NAME		=	mflib.a
 
 #
 
-INC_PATH	=	include/
+INC_PATH	=	include/ .
 SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
@@ -47,7 +47,8 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
 				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
 				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \
-				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c
+				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
+				src/math/quaternions.c
 
 #
 
@@ -80,7 +81,7 @@ obj			:
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
-		$(CC)	$(CFLAGS) -I $(INC_PATH) -c $< -o $@
+		$(CC)	$(CFLAGS) -c $< -o $@
 		@echo	"\033[32m[DONE]\033[0m"
 
 $(NAME)		:	$(OBJS)
