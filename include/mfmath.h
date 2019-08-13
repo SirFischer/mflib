@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/06/30 22:07:15 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/13 20:10:55 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,6 +107,9 @@ t_vec2d			vec2vec2_add(t_vec2d addend, t_vec2d augend);
 t_vec4d			vec4vec4_divide(t_vec4d dividend, t_vec4d divisor);
 t_vec3d			vec3vec3_divide(t_vec3d dividend, t_vec3d divisor);
 t_vec2d			vec2vec2_divide(t_vec2d dividend, t_vec2d divisor);
+
+double			vec3vec3_dist(t_vec3d v1, t_vec3d v2);
+double			vec2vec2_dist(t_vec2d v1, t_vec2d v2);
 
 t_vec4d			vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2);
 t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
