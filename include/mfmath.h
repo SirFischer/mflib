@@ -108,6 +108,10 @@ t_vec4d			vec4vec4_divide(t_vec4d dividend, t_vec4d divisor);
 t_vec3d			vec3vec3_divide(t_vec3d dividend, t_vec3d divisor);
 t_vec2d			vec2vec2_divide(t_vec2d dividend, t_vec2d divisor);
 
+t_vec4d			vec4vec4_multiply(t_vec4d vec1, t_vec4d vec2);
+t_vec3d			vec3vec3_multiply(t_vec3d vec1, t_vec3d vec2);
+t_vec2d			vec2vec2_multiply(t_vec2d vec1, t_vec2d vec2);
+
 t_vec4d			vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2);
 t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
 
