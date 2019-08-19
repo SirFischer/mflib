@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/08/13 20:10:55 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/14 12:06:27 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,6 +111,10 @@ t_vec2d			vec2vec2_divide(t_vec2d dividend, t_vec2d divisor);
 double			vec3vec3_dist(t_vec3d v1, t_vec3d v2);
 double			vec2vec2_dist(t_vec2d v1, t_vec2d v2);
 
+t_vec4d			vec4vec4_multiply(t_vec4d vec1, t_vec4d vec2);
+t_vec3d			vec3vec3_multiply(t_vec3d vec1, t_vec3d vec2);
+t_vec2d			vec2vec2_multiply(t_vec2d vec1, t_vec2d vec2);
+
 t_vec4d			vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2);
 t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
 
@@ -140,5 +144,19 @@ double			dist_pointplane(t_vec3d plane_n, t_vec3d plane_p, t_vec3d point);
 */
 
 t_vec3d			vec3p_get_normal(t_vec3d p1, t_vec3d p2, t_vec3d p3);
+
+/*
+** QUATERNIONS
+*/
+
+t_vec4d			quat_rotator(t_vec3d axis, double rad);
+
+t_vec4d			quat_multiply(t_vec4d q1, t_vec4d q2);
+
+t_vec4d			quat_inverse(t_vec4d q);
+
+t_mat3d			quat_to_mat3d(t_vec4d q);
+
+t_mat4d			quat_to_mat4d(t_vec4d q);
 
 #endif

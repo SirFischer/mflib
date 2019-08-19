@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/19 23:20:09 by mfischer         ###   ########.fr        #
+#    Updated: 2019/08/19 23:21:15 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME		=	mflib.a
 
 #
 
-INC_PATH	=	include/
+INC_PATH	=	include/ .
 SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
@@ -24,6 +24,8 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vecscalar_multiply.c src/math/vecscalar_add.c src/math/vecscalar_divide.c \
 				src/math/vec_divide.c src/math/dist_pointplane.c \
 				src/math/vec_get_normal.c src/math/vec_dist.c \
+				src/math/vec_divide.c src/math/vec_multiply.c src/math/dist_pointplane.c \
+				src/math/vec_get_normal.c \
 				src/string/mf_itoa.c src/string/mf_itoa_s.c src/string/mf_strnew.c \
 				src/string/mf_strchr.c src/string/mf_strcpy.c src/string/mf_strclr.c \
 				src/string/mf_strdup.c src/string/mf_strlen.c src/string/mf_strjoin.c \
@@ -48,7 +50,8 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
 				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
 				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \
-				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c
+				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
+				src/math/quaternions.c
 
 #
 
@@ -81,7 +84,7 @@ obj			:
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
-		$(CC)	$(CFLAGS) -I $(INC_PATH) -c $< -o $@
+		$(CC)	$(CFLAGS) -c $< -o $@
 		@echo	"\033[32m[DONE]\033[0m"
 
 $(NAME)		:	$(OBJS)
