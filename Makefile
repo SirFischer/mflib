@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/20 15:00:10 by mfischer         ###   ########.fr        #
+#    Updated: 2019/08/20 15:03:46 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,7 @@ CC			=	gcc
 CL			=	ar rc
 RAN			=	ranlib
 CFLAGS		+=	-Wall -Werror -Wextra -O3
-CFLAGS		+=	$(foreach d, $(INC_PATH), -I$d)
+CFLAGS		+=	$(foreach d, $(INC_PATH), -I $d)
 OBJS		=	$(patsubst src/%.c,obj/%.o,$(SRCS))
 RM			=	rm -rf
 
