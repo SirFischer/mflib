@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/08/14 12:06:27 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/20 19:34:29 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,10 @@ t_vec4d			vec4vec4_crossproduct(t_vec4d v1, t_vec4d v2);
 t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
 
 t_vec4d			vec3vec4_convert(t_vec3d vec);
+
+double     		vec4vec4_angle(t_vec4d v1, t_vec4d v2);
+double     		vec3vec3_angle(t_vec3d v1, t_vec3d v2);
+double     		vec2vec2_angle(t_vec2d v1, t_vec2d v2);
 
 /*
 ** MATRIX & VECTOR OPERATIONS

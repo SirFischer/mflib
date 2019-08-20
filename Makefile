@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/20 15:03:46 by mfischer         ###   ########.fr        #
+#    Updated: 2019/08/20 19:34:44 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/math/vec_divide.c src/math/dist_pointplane.c \
 				src/math/vec_get_normal.c src/math/vec_dist.c \
 				src/math/vec_divide.c src/math/vec_multiply.c src/math/dist_pointplane.c \
-				src/math/vec_get_normal.c \
+				src/math/vec_get_normal.c src/math/vec_angle.c \
 				src/string/mf_itoa.c src/string/mf_itoa_s.c src/string/mf_strnew.c \
 				src/string/mf_strchr.c src/string/mf_strcpy.c src/string/mf_strclr.c \
 				src/string/mf_strdup.c src/string/mf_strlen.c src/string/mf_strjoin.c \
