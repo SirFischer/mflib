@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "mfthreadpool.h"
-# include <stdio.h>
+#include <stdio.h>
 
 void	*thread_pool_workers_work(void *param)
 {
@@ -27,7 +27,8 @@ void	*thread_pool_workers_work(void *param)
 			pool->active_threads--;
 			pthread_mutex_unlock(&pool->mtx_work);
 			pthread_mutex_lock(&pool->mtx_wait);
-			if (pool->wait && pool->work_pool.top == -1 && !pool->active_threads)
+			if (pool->wait && pool->work_pool.top == -1
+			&& !pool->active_threads)
 			{
 				pool->wait = FALSE;
 				pthread_cond_broadcast(&pool->cnd_wait);

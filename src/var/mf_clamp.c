@@ -14,12 +14,16 @@
 
 int		mf_clamp_int(int value, int min, int max)
 {
-	const int tmp = (value < min) ? min : value;
+	const int tmp;
+
+	tmp = (value < min) ? min : value;
 	return ((tmp > max) ? max : tmp);
 }
 
 double	mf_clamp_double(double value, double min, double max)
 {
-	const double tmp = (value < min) ? min : value;
+	const double tmp;
+
+	tmp = (value < min) ? min : value;
 	return ((tmp > max) ? max : tmp);
 }

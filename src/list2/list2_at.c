@@ -14,8 +14,8 @@
 
 void				*list2_at(t_list2 *list, int index)
 {
-	t_node *head;
-	int i;
+	t_node	*head;
+	int		i;
 
 	i = -1;
 	head = list->list;

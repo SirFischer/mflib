@@ -27,7 +27,7 @@ static int	count_digits(int num)
 	return (i);
 }
 
-void	mf_itoa_s(int num, char *res)
+void		mf_itoa_s(int num, char *res)
 {
 	int		len;
 	int		neg;
@@ -36,7 +36,7 @@ void	mf_itoa_s(int num, char *res)
 	neg = (num < 0) ? 1 : 0;
 	len += (num < 0) ? 1 : 0;
 	res[len] = '\0';
-	while(--len >= 0)
+	while (--len >= 0)
 	{
 		res[len] = (num % 10) + '0';
 		num /= 10;

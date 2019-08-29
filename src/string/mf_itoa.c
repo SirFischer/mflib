@@ -27,7 +27,7 @@ static int	count_digits(int num)
 	return (i);
 }
 
-char	*mf_itoa(int num)
+char		*mf_itoa(int num)
 {
 	char	*res;
 	int		len;
@@ -38,7 +38,7 @@ char	*mf_itoa(int num)
 	len += (num < 0) ? 1 : 0;
 	res = (char *)malloc(sizeof(char) * (len + 1));
 	res[len] = '\0';
-	while(--len >= 0)
+	while (--len >= 0)
 	{
 		res[len] = (num % 10) + '0';
 		num /= 10;

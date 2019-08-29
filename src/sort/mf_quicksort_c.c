@@ -12,7 +12,8 @@
 
 #include "mfsort.h"
 
-static int	partition(char *arr, int index[2], t_bool (*f)(void *, void *), size_t size)
+static int	partition(char *arr, int index[2], t_bool (*f)(void *, void *),
+	size_t size)
 {
 	void	*pivot;
 	int		i;
@@ -33,14 +34,15 @@ static int	partition(char *arr, int index[2], t_bool (*f)(void *, void *), size_
 	return (i + 1);
 }
 
-void	mf_quicksort_c(void *arr, int i[2], t_bool (*f)(void *, void *), size_t size)
+void		mf_quicksort_c(void *arr, int i[2], t_bool (*f)(void *, void *),
+	size_t size)
 {
-	int ni;
+	int		ni;
 
 	if (i[0] < i[1])
 	{
-		ni = partition(arr, (int [2]){i[0], i[1]}, f, size);
-		mf_quicksort_c(arr, (int [2]){i[0], ni - 1}, f, size);
-		mf_quicksort_c(arr, (int [2]){ni + 1, i[1]}, f, size);
+		ni = partition(arr, (int[2]){i[0], i[1]}, f, size);
+		mf_quicksort_c(arr, (int[2]){i[0], ni - 1}, f, size);
+		mf_quicksort_c(arr, (int[2]){ni + 1, i[1]}, f, size);
 	}
 }

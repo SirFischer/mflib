@@ -14,7 +14,7 @@
 #include <stdio.h>
 
 static t_thread_worker	*thread_pool_init_worker(int worker_count,
-													t_thread_pool *pool)
+	t_thread_pool *pool)
 {
 	t_thread_worker		*workers;
 	int					i;
@@ -27,10 +27,10 @@ static t_thread_worker	*thread_pool_init_worker(int worker_count,
 	i = -1;
 	while (++i < worker_count)
 	{
-		pthread_create(&(workers[i].thread), NULL, &thread_pool_workers_work, pool);
+		pthread_create(&(workers[i].thread), NULL, &thread_pool_workers_work,
+			pool);
 		workers[i].id = i;
 	}
-	
 	return (workers);
 }
 

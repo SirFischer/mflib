@@ -10,10 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "mfstack.h"
 
-void			*stack_next_to_top(t_stack *stack)
+void	*stack_next_to_top(t_stack *stack)
 {
 	if (!stack)
 		return (NULL);
