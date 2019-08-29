@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 15:03:27 by mfischer          #+#    #+#             */
-/*   Updated: 2019/05/08 10:33:27 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/28 13:34:56 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ static int			mf_shorten(char **line, t_list *lst)
 			mf_strclr((char *)lst->content);
 		return (1);
 	}
+	lst->content_size = -1;
 	return (0);
 }
 
