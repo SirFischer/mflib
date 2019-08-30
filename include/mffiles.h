@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 15:15:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/04/25 17:32:02 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/30 12:50:53 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,6 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-int     get_next_line(const int fd, char **line);
+int			get_next_line(const int fd, char **line);
 
 #endif

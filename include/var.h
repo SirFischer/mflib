@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/23 23:40:10 by mfischer          #+#    #+#             */
-/*   Updated: 2019/07/06 00:38:27 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/30 12:52:57 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void				mf_swap_int(int *one, int *two, size_t n);
 void				mf_swap_void_ptrs(void *a, void *b, size_t size);
 double				mf_min_double(int num, ...);
 int					mf_min_int(int num, ...);
-uint32_t			mf_wrap_around(uint32_t x, uint32_t N);
+uint32_t			mf_wrap_around(uint32_t x, uint32_t n);
 
 #endif

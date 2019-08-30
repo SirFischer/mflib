@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/26 12:09:05 by mfischer         ###   ########.fr        #
+#    Updated: 2019/08/30 12:46:14 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,6 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/stack/stack_reset.c src/stack/stack_next_to_top.c \
 				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c \
 				src/var/mf_wrap_around.c \
-				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
-				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
-				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \
 				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
 				src/math/quaternions.c
 
