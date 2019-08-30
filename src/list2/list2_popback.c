@@ -12,7 +12,7 @@
 
 #include "mflist2.h"
 
-void				*list2_popback(t_list2	*list)
+void				*list2_popback(t_list2 *list)
 {
 	t_node	*head;
 	t_node	*tmp;
@@ -23,7 +23,7 @@ void				*list2_popback(t_list2	*list)
 	list->size--;
 	head = list->list;
 	while (head->next)
-			head = head->next;
+		head = head->next;
 	data = head->data;
 	tmp = head->prev;
 	if (list->size == 1)

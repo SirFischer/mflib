@@ -12,7 +12,7 @@
 
 #include "var.h"
 
-uint32_t	mf_wrap_around(uint32_t x, uint32_t N)
+uint32_t	mf_wrap_around(uint32_t x, uint32_t n)
 {
-  return ((uint64_t) x * (uint64_t) N) >> 32 ;
+	return ((uint64_t)x * (uint64_t)n) >> 32;
 }

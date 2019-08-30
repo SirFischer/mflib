@@ -35,7 +35,7 @@ static int	partition(int *arr, int low, int high)
 
 void		mf_quicksort(int *arr, int low, int high)
 {
-	int ni;
+	int		ni;
 
 	if (low < high)
 	{
