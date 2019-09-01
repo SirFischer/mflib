@@ -60,6 +60,10 @@ t_mat2d			mat2mat2_multiply(t_mat2d mat1, t_mat2d mat2);
 ** VECTOR OPERATIONS
 */
 
+int				vec4_eqal(t_vec4d vec1, t_vec4d vec2);
+int				vec3_eqal(t_vec3d vec1, t_vec3d vec2);
+int				vec2_eqal(t_vec2d vec1, t_vec2d vec2);
+
 void			vec4_init(t_vec4d *vec);
 void			vec3_init(t_vec3d *vec);
 void			vec2_init(t_vec2d *vec);

@@ -15,7 +15,7 @@ NAME		=	mflib.a
 #
 
 INC_PATH	=	include/ .
-SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
+SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
 				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
