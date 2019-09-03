@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/30 12:46:14 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/03 17:11:51 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,8 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c \
 				src/var/mf_wrap_around.c \
 				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
-				src/math/quaternions.c
+				src/math/quaternions.c \
+				src/rand/mf_rand.c src/rand/mf_seed.c
 
 #
 
@@ -78,6 +79,7 @@ obj			:
 		@mkdir	-p $@/var
 		@mkdir	-p $@/threadpool
 		@mkdir	-p $@/sort
+		@mkdir	-p $@/rand
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
