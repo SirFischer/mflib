@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:44:39 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/03 17:12:08 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:10:20 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,6 @@
 # include "include/boolean.h"
 # include "include/mfsort.h"
 # include "include/mfrand.h"
+# include "include/mfprintf.h"
 
 #endif
