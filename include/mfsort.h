@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/05 23:09:55 by mfischer          #+#    #+#             */
-/*   Updated: 2019/07/06 13:04:19 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/30 12:56:57 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	mf_quicksort(int *arr, int low, int high);
 **
 ** RETURNS: void
 */
-void	mf_quicksort_c(void *arr, int i[2], t_bool (*f)(void *, void *), size_t size);
+void	mf_quicksort_c(void *arr, int i[2], t_bool (*f)(void *, void *),
+						size_t size);
 
 #endif

@@ -14,8 +14,8 @@
 
 t_mat4d	mat4_rotate_yaw(t_mat4d mat, double angle)
 {
-	t_mat4d tmp;
-	double new_angle;
+	t_mat4d		tmp;
+	double		new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
 	mat4_init(&tmp);
@@ -28,8 +28,8 @@ t_mat4d	mat4_rotate_yaw(t_mat4d mat, double angle)
 
 t_mat4d	mat4_rotate_pitch(t_mat4d mat, double angle)
 {
-	t_mat4d tmp;
-	double new_angle;
+	t_mat4d		tmp;
+	double		new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
 	mat4_init(&tmp);
@@ -42,8 +42,8 @@ t_mat4d	mat4_rotate_pitch(t_mat4d mat, double angle)
 
 t_mat4d	mat4_rotate_roll(t_mat4d mat, double angle)
 {
-	t_mat4d tmp;
-	double new_angle;
+	t_mat4d		tmp;
+	double		new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
 	mat4_init(&tmp);
@@ -56,8 +56,8 @@ t_mat4d	mat4_rotate_roll(t_mat4d mat, double angle)
 
 t_mat3d	mat3_rotate(t_mat3d mat, double angle)
 {
-	t_mat3d tmp;
-	double new_angle;
+	t_mat3d		tmp;
+	double		new_angle;
 
 	new_angle = angle * 3.14159265359 / 180.0;
 	mat3_init(&tmp);

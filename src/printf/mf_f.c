@@ -6,20 +6,20 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 15:35:09 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:14 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:01:42 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
-static uint			mf_nbrlen(long double n)
+static int			mf_nbrlen(long double n)
 {
 	int			i;
 	long long	tmp;
 
 	tmp = mf_floor(n);
 	i = (tmp < 1) ? 1 : 0;
-	while (tmp > 1)
+	while (tmp >= 1)
 	{
 		tmp /= 10;
 		i++;

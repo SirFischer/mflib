@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/09/04 13:46:35 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/04 14:00:12 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		=	mflib.a
 #
 
 INC_PATH	=	include/ .
-SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
+SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/math/matmat_multiply.c src/math/matrix_clear.c src/math/matrix_init.c \
 				src/math/matvec_multiply.c src/math/vec_add.c src/math/vec_conversions.c \
 				src/math/vec_crossproduct.c src/math/vec_dot.c src/math/vec_magnitude.c \
@@ -32,6 +32,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/string/mf_atoi.c src/string/mf_isspace.c src/string/mf_strsub.c \
 				src/string/mf_atof.c src/string/mf_isdigit.c src/string/mf_strnchr.c \
 				src/string/mf_strcmp.c src/string/mf_strstr.c src/string/mf_strncpy.c \
+				src/string/mf_uitoa.c src/string/mf_toupper.c src/string/mf_strtoupper.c \
 				src/files/get_next_line.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
@@ -47,22 +48,20 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/stack/stack_reset.c src/stack/stack_next_to_top.c \
 				src/var/mf_swap.c src/var/mf_min.c src/var/mf_clamp.c \
 				src/var/mf_wrap_around.c \
-				src/threadpool/threadpool_init.c src/threadpool/threadpool_push_work.c \
-				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
-				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \
 				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
 				src/math/quaternions.c \
 				src/printf/mf_printf.c src/printf/mf_parse.c src/printf/mf_s.c src/printf/mf_dispatch.c src/printf/mf_f.c \
 				src/printf/mf_dui.c src/printf/mf_p.c src/printf/mf_s.c src/printf/mf_o.c src/printf/mf_c.c src/printf/mf_x.c \
 				src/printf/mf_na.c src/printf/mf_get.c src/printf/mf_percent_func.c src/printf/mf_subparse.c \
-				src/printf/mf_float_utils.c
+				src/printf/mf_float_utils.c \
+				src/rand/mf_rand.c src/rand/mf_seed.c
 
 #
 
 CC			=	gcc
 CL			=	ar rc
 RAN			=	ranlib
-CFLAGS		+=	-Wall -Werror -Wextra -O3
+CFLAGS		+=	-Wall -Werror -Wextra -flto -O3
 CFLAGS		+=	$(foreach d, $(INC_PATH), -I $d)
 OBJS		=	$(patsubst src/%.c,obj/%.o,$(SRCS))
 RM			=	rm -rf
@@ -86,6 +85,7 @@ obj			:
 		@mkdir	-p $@/threadpool
 		@mkdir	-p $@/sort
 		@mkdir	-p $@/printf
+		@mkdir	-p $@/rand
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"

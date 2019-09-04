@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   mfrand.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:33:02 by kle-van-          #+#    #+#             */
-/*   Updated: 2018/11/09 11:41:04 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/03 17:02:28 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/03 17:03:49 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef MFRAND_H
+# define MFRAND_H
 
-void	ft_memdel(void **ap)
-{
-	if (ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
-}
+int		mf_seed(int seed);
+int		mf_rand();
+
+#endif

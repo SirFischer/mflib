@@ -12,7 +12,7 @@
 
 #include "mfstack.h"
 
-void			stack_push(t_stack *stack, void *data)
+void	stack_push(t_stack *stack, void *data)
 {
 	if (!data)
 		return ;

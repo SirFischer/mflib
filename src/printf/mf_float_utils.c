@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 18:59:08 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:17 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:01:07 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 long long	mf_fmod(long double num, int mod)
 {

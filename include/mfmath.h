@@ -6,15 +6,15 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/08/20 19:34:29 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/08/30 12:56:27 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MYMATH_H
-# define MYMATH_H
+#ifndef MFMATH_H
+# define MFMATH_H
 
-#include <math.h>
-#include "math_types.h"
+# include <math.h>
+# include "math_types.h"
 
 typedef struct	s_intrect
 {
@@ -59,6 +59,10 @@ t_mat2d			mat2mat2_multiply(t_mat2d mat1, t_mat2d mat2);
 /*
 ** VECTOR OPERATIONS
 */
+
+int				vec4_eqal(t_vec4d vec1, t_vec4d vec2);
+int				vec3_eqal(t_vec3d vec1, t_vec3d vec2);
+int				vec2_eqal(t_vec2d vec1, t_vec2d vec2);
 
 void			vec4_init(t_vec4d *vec);
 void			vec3_init(t_vec3d *vec);
@@ -120,9 +124,9 @@ t_vec3d			vec3vec3_crossproduct(t_vec3d v1, t_vec3d v2);
 
 t_vec4d			vec3vec4_convert(t_vec3d vec);
 
-double     		vec4vec4_angle(t_vec4d v1, t_vec4d v2);
-double     		vec3vec3_angle(t_vec3d v1, t_vec3d v2);
-double     		vec2vec2_angle(t_vec2d v1, t_vec2d v2);
+double			vec4vec4_angle(t_vec4d v1, t_vec4d v2);
+double			vec3vec3_angle(t_vec3d v1, t_vec3d v2);
+double			vec2vec2_angle(t_vec2d v1, t_vec2d v2);
 
 /*
 ** MATRIX & VECTOR OPERATIONS
@@ -132,7 +136,6 @@ t_vec4d			mat4vec4_multiply(t_mat4d mat, t_vec4d vec);
 t_vec3d			mat3vec3_multiply(t_mat3d mat, t_vec3d vec);
 t_vec2d			mat2vec2_multiply(t_mat2d mat, t_vec2d vec);
 
-
 /*
 ** 3D MATH FUNCS
 */
@@ -141,7 +144,8 @@ t_vec2d			mat2vec2_multiply(t_mat2d mat, t_vec2d vec);
 ** returns shortest distance between point and plane.(normal must be normalized)
 */
 
-double			dist_pointplane(t_vec3d plane_n, t_vec3d plane_p, t_vec3d point);
+double			dist_pointplane(t_vec3d plane_n, t_vec3d plane_p,
+								t_vec3d point);
 
 /*
 ** Calculates the normal of three points in 3d space

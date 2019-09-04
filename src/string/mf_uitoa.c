@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_unsigned_itoa.c                                 :+:      :+:    :+:   */
+/*   mf_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <kle-van-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/19 12:27:55 by kle-van-          #+#    #+#             */
-/*   Updated: 2019/02/19 12:38:29 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/04 13:51:38 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/04 13:53:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mfstring.h"
 
-static unsigned long long	ft_length(unsigned long long n)
+static unsigned long long	mf_length(unsigned long long n)
 {
 	int	size;
 
@@ -27,14 +27,14 @@ static unsigned long long	ft_length(unsigned long long n)
 	return (size);
 }
 
-char						*ft_unsigned_itoa(unsigned long long n)
+char						*mf_uitoa(unsigned long long n)
 {
 	unsigned long long	nb;
 	int					size;
 	char				*new;
 
 	nb = n;
-	size = ft_length(nb);
+	size = mf_length(nb);
 	new = (char *)malloc(sizeof(char) * (size + 1));
 	if (!new)
 		return (NULL);

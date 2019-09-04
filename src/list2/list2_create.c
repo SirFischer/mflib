@@ -12,7 +12,7 @@
 
 #include "mflist2.h"
 
-t_list2				*list2_create()
+t_list2				*list2_create(void)
 {
 	t_list2		*list;
 

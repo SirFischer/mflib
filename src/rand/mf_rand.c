@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   mf_rand.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/12 02:59:24 by kle-van-          #+#    #+#             */
-/*   Updated: 2018/11/12 09:50:30 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/03 17:05:42 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/03 17:11:04 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mfrand.h"
 
-void	ft_putnbr(int n)
+int		mf_rand()
 {
-	if (n < 0)
+	static int	prev_seed = 0;
+	static int	cur_seed = 0;
+
+	if (prev_seed != mf_seed(-1))
 	{
-		ft_putchar('-');
-		if (n == -2147483648)
-			ft_putstr("2147483648");
-		else
-			ft_putnbr(-n);
+		prev_seed = mf_seed(-1);
+		cur_seed = prev_seed;
 	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putchar((n % 10) + '0');
-	}
-	else
-		ft_putchar(n + '0');
+	cur_seed = (1103515245 * cur_seed + 12345) % __INT_MAX__;
+	return (cur_seed);
 }

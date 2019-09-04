@@ -18,7 +18,7 @@ int				list2_push(t_list2 *list, void *data)
 	t_node *tmp;
 
 	if (!(new = (t_node *)malloc(sizeof(t_node))))
-		return 0;
+		return (0);
 	tmp = list->list;
 	list->list = new;
 	new->next = tmp;

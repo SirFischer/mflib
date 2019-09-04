@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 14:41:37 by kle-van-          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:10 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 13:49:46 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 static char	*mf_dispatch3(t_params *params, int *size, char **str)
 {

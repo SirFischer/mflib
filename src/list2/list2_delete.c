@@ -17,7 +17,7 @@ void	*list2_delete(t_list2 *list, t_node *node)
 	void *tmp;
 
 	if (!node)
-		return NULL;
+		return (NULL);
 	tmp = node->data;
 	if (node->next)
 		node->next->prev = node->prev;

@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 15:33:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:12 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 13:53:21 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 void		mf_printpad_zeros(char **tmp, int padsize, int nbz)
 {
@@ -91,7 +91,7 @@ static char	*mf_sub_dui2(t_params *param, unsigned long long nb)
 	char	*nbstr;
 	t_aille	data;
 
-	if (!(nbstr = mf_unsigned_itoa(nb)))
+	if (!(nbstr = mf_uitoa(nb)))
 		return (NULL);
 	data.size = mf_strlen(nbstr);
 	data.nbz = 0;

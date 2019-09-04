@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/15 18:49:37 by kle-van-          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:28 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:00:29 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 long long			mf_get_di(va_list *ap, t_params *param)
 {

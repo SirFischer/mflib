@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/21 11:56:32 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:39:07 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:00:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 int		mf_isflag(char **str)
 {

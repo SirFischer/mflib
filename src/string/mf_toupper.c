@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strclr.c                                        :+:      :+:    :+:   */
+/*   mf_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 11:46:14 by kle-van-          #+#    #+#             */
-/*   Updated: 2018/11/09 11:51:22 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/04 13:59:05 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/04 13:59:25 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mfstring.h"
 
-void	ft_strclr(char *s)
+int		mf_toupper(int c)
 {
-	if (s)
-	{
-		while (*s)
-			*s++ = '\0';
-		while (*s == '\0')
-			*s++ = '\0';
-	}
+	if (c >= 97 && c <= 122)
+		return (c - 32);
+	return (c);
 }

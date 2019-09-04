@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 14:59:25 by kle-van-          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:09 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 13:55:21 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 static void	mf_pad(t_params *param, char **tmp)
 {

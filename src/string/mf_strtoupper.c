@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   mf_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 10:31:13 by kle-van-          #+#    #+#             */
-/*   Updated: 2018/11/09 10:31:44 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/04 13:56:26 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/04 13:56:52 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mfstring.h"
 
-int		ft_tolower(int c)
+void	mf_strtoupper(char *str)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	if (!str)
+		return ;
+	while (*str)
+	{
+		*str = mf_toupper(*str);
+		str++;
+	}
 }

@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   mf_seed.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kle-van- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/09 08:35:13 by kle-van-          #+#    #+#             */
-/*   Updated: 2018/11/09 08:46:47 by kle-van-         ###   ########.fr       */
+/*   Created: 2019/09/03 17:04:27 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/03 17:05:34 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "mfrand.h"
 
-char	*ft_strchr(const char *s, int c)
+int		mf_seed(int seed)
 {
-	while (*s && *s != (char)c)
-		s++;
-	if (*s == (char)c)
-		return ((char *)s);
-	if (c == 0 && *s == '\0')
-		return ((char *)s);
-	return (NULL);
+	static int seed_s = 0;
+
+	if (seed != -1)
+		seed_s = seed;
+	return (seed_s);
 }

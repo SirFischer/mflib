@@ -6,11 +6,11 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/19 13:16:57 by kle-van-          #+#    #+#             */
-/*   Updated: 2019/09/04 13:38:51 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 14:00:41 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mf_printf.h"
+#include "mfprintf.h"
 
 char	*mf_percent_func(t_params *param)
 {
