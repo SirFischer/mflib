@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/04 15:09:43 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 15:13:03 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 20:34:01 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ static int	mf_getpercent(char **buff, char **str, int *len)
 	return (0);
 }
 
-void	mf_subprint(va_list *ap, char **str, char **buff, int *len)
+void		mf_subprint(va_list *ap, char **str, char **buff, int *len)
 {
 	char	*tmp;
 	char	*tmp2;
