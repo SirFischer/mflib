@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/08/20 19:34:44 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/04 13:46:35 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/string/mf_strdup.c src/string/mf_strlen.c src/string/mf_strjoin.c \
 				src/string/mf_atoi.c src/string/mf_isspace.c src/string/mf_strsub.c \
 				src/string/mf_atof.c src/string/mf_isdigit.c src/string/mf_strnchr.c \
-				src/string/mf_strcmp.c src/string/mf_strstr.c \
+				src/string/mf_strcmp.c src/string/mf_strstr.c src/string/mf_strncpy.c \
 				src/files/get_next_line.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \
@@ -51,7 +51,11 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c \
 				src/threadpool/threadpool_work_pop.c src/threadpool/threadpool_work_stack.c \
 				src/threadpool/threadpool_workers_work.c src/threadpool/threadpool_wait.c \
 				src/sort/mf_quicksort.c src/sort/mf_quicksort_c.c \
-				src/math/quaternions.c
+				src/math/quaternions.c \
+				src/printf/mf_printf.c src/printf/mf_parse.c src/printf/mf_s.c src/printf/mf_dispatch.c src/printf/mf_f.c \
+				src/printf/mf_dui.c src/printf/mf_p.c src/printf/mf_s.c src/printf/mf_o.c src/printf/mf_c.c src/printf/mf_x.c \
+				src/printf/mf_na.c src/printf/mf_get.c src/printf/mf_percent_func.c src/printf/mf_subparse.c \
+				src/printf/mf_float_utils.c
 
 #
 
@@ -81,6 +85,7 @@ obj			:
 		@mkdir	-p $@/var
 		@mkdir	-p $@/threadpool
 		@mkdir	-p $@/sort
+		@mkdir	-p $@/printf
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"
