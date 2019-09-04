@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/13 15:56:18 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:32:21 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 15:10:38 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,6 +71,7 @@ typedef struct		s_aille
 }					t_aille;
 
 int					mf_printf(const char *restrict format, ...);
+char				*mf_sprintf(const char *restrict format, ...);
 char				*mf_parse(va_list *ap, char **str, int *argsize);
 char				*mf_dispatch(va_list *ap, t_params *params, int *size);
 char				*mf_c_func(va_list *ap, t_params *param);
@@ -94,5 +95,7 @@ void				mf_init_len(t_aille *len, t_params *p,
 void				mf_div_f(int *i, long double *tmp, char *res);
 long long			mf_floor(long double numb);
 long long			mf_fmod(long double num, int mod);
+void				mf_subprint(va_list *ap, char **str,
+								char **buff, int *len);
 
 #endif
