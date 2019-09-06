@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 15:34:38 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:54:20 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 23:46:11 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ static char	*mf_get_address(long long address, t_params *param)
 
 	i = ((param->flags & PRECISION) == PRECISION
 	&& (int)param->prec > mf_plen(address)) ?
-						param->prec + 2 : mf_plen(address) + 2;
+						(int)param->prec + 2 : mf_plen(address) + 2;
 	i = ((param->flags & PRECISION) != PRECISION
 	&& (param->flags & WIDTH) == WIDTH
 	&& (param->flags & ZPAD) == ZPAD
 	&& (param->flags & RPAD) != RPAD
-	&& (int)param->width > i) ? param->width : i;
+	&& (int)param->width > i) ? (int)param->width : i;
 	if (!(res = mf_strnew(i)))
 		return (NULL);
 	if (address == 0)

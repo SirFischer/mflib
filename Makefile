@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/09/04 14:22:55 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/04 15:11:06 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/printf/mf_printf.c src/printf/mf_parse.c src/printf/mf_s.c src/printf/mf_dispatch.c src/printf/mf_f.c \
 				src/printf/mf_dui.c src/printf/mf_p.c src/printf/mf_s.c src/printf/mf_o.c src/printf/mf_c.c src/printf/mf_x.c \
 				src/printf/mf_na.c src/printf/mf_get.c src/printf/mf_percent_func.c src/printf/mf_subparse.c \
-				src/printf/mf_float_utils.c \
+				src/printf/mf_float_utils.c src/printf/mf_subprint.c \
 				src/rand/mf_rand.c src/rand/mf_seed.c
 
 #

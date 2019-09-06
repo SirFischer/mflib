@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/14 15:34:57 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 13:55:09 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/04 23:47:31 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,14 @@ static int		mf_plen(unsigned long long p0)
 static char		*mf_get_octal(t_params *param, unsigned long long num)
 {
 	short		len;
-	uint16_t	tmp;
+	short int	tmp;
 	short		count;
 	char		*res;
 
 	len = mf_plen(num);
 	len = ((param->flags & ALTERNATE) == ALTERNATE && num) ? len + 1 : len;
 	len = ((param->flags & PRECISION) == PRECISION &&
-	(int)param->prec > len) ? param->prec : len;
+	(int)param->prec > len) ? (int)param->prec : len;
 	if (!(res = mf_strnew(len)))
 		return (NULL);
 	count = -1;
