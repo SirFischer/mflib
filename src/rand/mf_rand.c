@@ -6,13 +6,13 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/03 17:05:42 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/03 17:11:04 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/06 10:02:16 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mfrand.h"
 
-int		mf_rand()
+int		mf_rand(void)
 {
 	static int	prev_seed = 0;
 	static int	cur_seed = 0;
