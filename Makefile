@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/09/04 15:11:06 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/08 00:48:17 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,7 +55,10 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/printf/mf_dui.c src/printf/mf_p.c src/printf/mf_s.c src/printf/mf_o.c src/printf/mf_c.c src/printf/mf_x.c \
 				src/printf/mf_na.c src/printf/mf_get.c src/printf/mf_percent_func.c src/printf/mf_subparse.c \
 				src/printf/mf_float_utils.c src/printf/mf_subprint.c \
-				src/rand/mf_rand.c src/rand/mf_seed.c
+				src/rand/mf_rand.c src/rand/mf_seed.c \
+				src/vectorlist/vector_list_init.c src/vectorlist/vector_list_push.c \
+				src/vectorlist/vector_list_destroy.c src/vectorlist/vector_list_delete.c \
+				src/vectorlist/vector_list_at.c
 
 #
 
@@ -87,6 +90,7 @@ obj			:
 		@mkdir	-p $@/sort
 		@mkdir	-p $@/printf
 		@mkdir	-p $@/rand
+		@mkdir	-p $@/vectorlist
 
 obj/%.o		:	src/%.c
 		@echo	"\033[31m--| Creation du $@ |--\033[0m"

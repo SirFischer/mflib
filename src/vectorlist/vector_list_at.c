@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_at.c                                         :+:      :+:    :+:   */
+/*   vector_list_at.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 21:05:07 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/07 22:32:13 by mfischer         ###   ########.fr       */
+/*   Created: 2019/09/08 00:40:12 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/08 00:42:12 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist2.h"
+#include "mfveclist.h"
 
-void				*list2_at(t_list2 *list, int index)
+void		*vector_list_at(t_vector_list vector, size_t index)
 {
-	t_node	*head;
-	int		i;
-
-	i = -1;
-	head = list->list;
-	if (list->size == 0)
-		return (NULL);
-	while (head->next && ++i < index)
-		head = head->next;
-	return (head->data);
+	if (index < vector.size)
+		return (vector.list[index]);
+	return (NULL);
 }

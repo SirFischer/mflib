@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/30 23:44:39 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/06 10:05:00 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/07 22:49:17 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@
 # include "include/mfsort.h"
 # include "include/mfrand.h"
 # include "include/mfprintf.h"
+# include "include/mfveclist.h"
 
 #endif

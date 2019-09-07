@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   list2_at.c                                         :+:      :+:    :+:   */
+/*   vector_list_init.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/19 21:05:07 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/07 22:32:13 by mfischer         ###   ########.fr       */
+/*   Created: 2019/09/07 22:50:26 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/08 00:50:04 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mflist2.h"
+#include "mfveclist.h"
 
-void				*list2_at(t_list2 *list, int index)
+t_bool			vector_list_init(t_vector_list *vector)
 {
-	t_node	*head;
-	int		i;
-
-	i = -1;
-	head = list->list;
-	if (list->size == 0)
-		return (NULL);
-	while (head->next && ++i < index)
-		head = head->next;
-	return (head->data);
+	vector->capacity = VECTOR_LIST_INIT_CAPACITY;
+	vector->size = 0;
+	if (!(vector->list = (void **)malloc(sizeof(void *)
+		* VECTOR_LIST_INIT_CAPACITY)))
+		return (FALSE);
+	return (TRUE);
 }
