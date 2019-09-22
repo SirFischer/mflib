@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/31 00:10:46 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/16 01:33:48 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/22 20:21:38 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -228,7 +228,7 @@ typedef union			u_mat3f
 typedef union			u_mat2f
 {
 	float				a[2][2];
-	t_vec2d				v[2];
+	t_vec2f				v[2];
 }						t_mat2f;
 
 #endif

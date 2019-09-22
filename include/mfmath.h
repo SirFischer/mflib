@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/16 01:43:44 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/22 20:25:19 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,14 @@ t_mat4d			mat4_rotate_pitch(t_mat4d mat, double angle);
 t_mat4d			mat4_rotate_roll(t_mat4d mat, double angle);
 
 t_mat3d			mat3_rotate(t_mat3d mat, double angle);
+
+t_mat4f			mat4d_to_mat4f(t_mat4d mat);
+t_mat3f			mat3d_to_mat3f(t_mat3d mat);
+t_mat2f			mat2d_to_mat2f(t_mat2d mat);
+
+t_mat4d			mat4f_to_mat4d(t_mat4f mat);
+t_mat3d			mat3f_to_mat3d(t_mat3f mat);
+t_mat2d			mat2f_to_mat2d(t_mat2f mat);
 
 /*
 ** MATRIX & MATRIX OPERATIONS
