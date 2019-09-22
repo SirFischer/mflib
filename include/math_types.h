@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/31 00:10:46 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/22 20:21:38 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/22 20:32:26 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -230,5 +230,20 @@ typedef union			u_mat2f
 	float				a[2][2];
 	t_vec2f				v[2];
 }						t_mat2f;
+
+typedef struct			s_mat4f_s
+{
+	float				a[16];
+}						t_mat4f_t;
+
+typedef struct			s_mat3f_s
+{
+	float				a[9];
+}						t_mat3f_t;
+
+typedef struct			s_mat2f_s
+{
+	float				a[4];
+}						t_mat2f_t;
 
 #endif
