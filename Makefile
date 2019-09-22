@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/09/16 01:44:22 by mfischer         ###   ########.fr        #
+#    Updated: 2019/09/22 20:08:32 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 CC			=	gcc
 CL			=	ar rc
 RAN			=	ranlib
-CFLAGS		+=	-Wall -Werror -Wextra -g
+CFLAGS		+=	-Wall -Werror -Wextra -g -lm
 CFLAGS		+=	$(foreach d, $(INC_PATH), -I $d)
 OBJS		=	$(patsubst src/%.c,obj/%.o,$(SRCS))
 RM			=	rm -rf
