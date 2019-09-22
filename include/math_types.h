@@ -6,12 +6,70 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/31 00:10:46 by mfischer          #+#    #+#             */
-/*   Updated: 2019/03/31 00:16:33 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/16 01:33:48 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATH_TYPES_H
 # define MATH_TYPES_H
+
+typedef union u_vec2f	t_vec2f;
+struct					s_vec2f
+{
+	float				x;
+	float				y;
+};
+union					u_vec2f
+{
+	struct s_vec2f		n;
+	float				a[2];
+};
+
+typedef union u_vec3f	t_vec3f;
+struct					s_vec3f
+{
+	float				x;
+	float				y;
+	float				z;
+};
+struct					s_vec3f_vec2fc
+{
+	t_vec2f				vec2f;
+	float				z;
+};
+union					u_vec3f
+{
+	struct s_vec3f			n;
+	float					a[3];
+	struct s_vec3f_vec2fc	c2;
+};
+
+typedef union u_vec4f	t_vec4f;
+struct					s_vec4f
+{
+	float				x;
+	float				y;
+	float				z;
+	float				w;
+};
+struct					s_vec4f_vec2fc
+{
+	t_vec2f				vec2f;
+	float				z;
+	float				w;
+};
+struct					s_vec4f_vec3fc
+{
+	t_vec3f				vec3f;
+	float				w;
+};
+union					u_vec4f
+{
+	struct s_vec4f			n;
+	float					a[4];
+	struct s_vec4f_vec2fc	c2;
+	struct s_vec4f_vec3fc	c3;
+};
 
 typedef union u_vec2d	t_vec2d;
 struct					s_vec2d
@@ -154,5 +212,23 @@ typedef union			u_mat2d
 	double				a[2][2];
 	t_vec2d				v[2];
 }						t_mat2d;
+
+typedef union			u_mat4f
+{
+	float				a[4][4];
+	t_vec4f				v[4];
+}						t_mat4f;
+
+typedef union			u_mat3f
+{
+	float				a[3][3];
+	t_vec3f				v[3];
+}						t_mat3f;
+
+typedef union			u_mat2f
+{
+	float				a[2][2];
+	t_vec2d				v[2];
+}						t_mat2f;
 
 #endif

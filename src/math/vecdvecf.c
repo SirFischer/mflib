@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   vector_list_at.c                                   :+:      :+:    :+:   */
+/*   vecdvecf.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/08 00:40:12 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/22 13:21:09 by mfischer         ###   ########.fr       */
+/*   Created: 2019/09/16 01:36:22 by mfischer          #+#    #+#             */
+/*   Updated: 2019/09/16 01:49:19 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "mfveclist.h"
+#include "mfmath.h"
 
-void		*vector_list_at(t_vector_list vector, size_t index)
+t_vec4f		vec4d_to_vec4f(t_vec4d vec)
 {
-	if (index < vector.size)
-		return (vector.list + (index * vector.item_size));
-	return (NULL);
+	return ((t_vec4f){.a = {vec.n.x, vec.n.y, vec.n.z, vec.n.w}});
+}
+
+t_vec3f		vec3d_to_vec3f(t_vec3d vec)
+{
+	return ((t_vec3f){.a = {vec.n.x, vec.n.y, vec.n.z}});
+}
+
+t_vec2f		vec2d_to_vec2f(t_vec2d vec)
+{
+	return ((t_vec2f){.a = {vec.n.x, vec.n.y}});
 }

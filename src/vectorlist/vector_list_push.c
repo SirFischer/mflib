@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 22:58:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/08 00:49:35 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/22 13:27:12 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 static t_bool			vector_list_increase_size(t_vector_list *vector)
 {
-	void **tmp;
+	char *tmp;
 
-	if (!(tmp = (void **)realloc(vector->list,
-		sizeof(void *) * vector->capacity * 2)))
+	if (!(tmp = (char *)realloc(vector->list,
+		vector->item_size * vector->capacity * 2)))
 		return (FALSE);
 	vector->list = tmp;
 	vector->capacity *= 2.0;
@@ -29,6 +29,7 @@ t_bool			vector_list_push(t_vector_list *vector, void *data)
 	if (vector->size == vector->capacity)
 		if (!vector_list_increase_size(vector))
 			return (FALSE);
-	vector->list[vector->size++] = data;
+	mf_memcpy(vector->list + (vector->size * vector->item_size), data, vector->item_size);
+	vector->size++;
 	return (TRUE); 
 }

@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/04 22:23:16 by mfischer          #+#    #+#             */
-/*   Updated: 2019/08/30 12:56:27 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/16 01:43:44 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,6 +127,14 @@ t_vec4d			vec3vec4_convert(t_vec3d vec);
 double			vec4vec4_angle(t_vec4d v1, t_vec4d v2);
 double			vec3vec3_angle(t_vec3d v1, t_vec3d v2);
 double			vec2vec2_angle(t_vec2d v1, t_vec2d v2);
+
+t_vec4f			vec4d_to_vec4f(t_vec4d vec);
+t_vec3f			vec3d_to_vec3f(t_vec3d vec);
+t_vec2f			vec2d_to_vec2f(t_vec2d vec);
+
+t_vec4d			vec4f_to_vec4d(t_vec4f vec);
+t_vec3d			vec3f_to_vec3d(t_vec3f vec);
+t_vec2d			vec2f_to_vec2d(t_vec2f vec);
 
 /*
 ** MATRIX & VECTOR OPERATIONS
