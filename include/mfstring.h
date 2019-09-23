@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 19:27:14 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/04 15:39:58 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/09/23 19:27:16 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ char	*mf_strsub(char const *s, unsigned int start, size_t len);
 double	mf_atof(const char *str);
 int		mf_strnchr(char *str, char c);
 char	*mf_strstr(const char *haystack, const char *needle);
+char	*mf_strstrchr(const char *haystack, const char *needle, char c);
 char	*mf_strncpy(char *dst, const char *src, size_t n);
 int		mf_strcmp(const char *s1, const char *s2);
 char	*mf_uitoa(unsigned long long n);
