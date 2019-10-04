@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/07 22:58:05 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/22 13:53:39 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/10/04 02:35:20 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ static t_bool			vector_list_increase_size(t_vector_list *vector)
 
 t_bool			vector_list_push(t_vector_list *vector, void *data)
 {
+	if (!vector)
+		return (FALSE);
 	if (vector->size == vector->capacity)
 		if (!vector_list_increase_size(vector))
 			return (FALSE);
