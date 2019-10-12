@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/12 17:45:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/10/12 18:14:46 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/10/12 18:22:00 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static unsigned int	count_words(const char *s, char c)
 	return (count);
 }
 
-char		**handle_error(char **list)
+static char		**handle_error(char **list)
 {
 	while (list && *list)
 		free(*list++);
