@@ -6,7 +6,7 @@
 #    By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/30 23:36:53 by mfischer          #+#    #+#              #
-#    Updated: 2019/09/25 01:23:48 by mfischer         ###   ########.fr        #
+#    Updated: 2019/10/12 17:58:19 by mfischer         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRCS		=	src/math/mat_scale.c src/math/mat_translate.c src/math/vec_equal.c\
 				src/string/mf_strcmp.c src/string/mf_strstr.c src/string/mf_strncpy.c \
 				src/string/mf_uitoa.c src/string/mf_toupper.c src/string/mf_strtoupper.c \
 				src/string/mf_strrchr.c src/string/mf_strstrchr.c src/string/mf_strnstr.c \
+				src/string/mf_strsplit.c \
 				src/files/get_next_line.c \
 				src/list/mf_lstadd.c src/list/mf_lstcount.c src/list/mf_lstdel.c \
 				src/list/mf_lstdelone.c src/list/mf_lstiter.c src/list/mf_lstmap.c \

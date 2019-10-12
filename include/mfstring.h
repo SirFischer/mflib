@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/06 19:27:14 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/25 01:23:21 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/10/12 17:58:41 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ char	*mf_uitoa(unsigned long long n);
 void	mf_strtoupper(char *str);
 int		mf_toupper(int c);
 char	*mf_strrchr(const char *s, int c);
+char	**mf_strsplit(const char *s, char c);
 
 #endif
