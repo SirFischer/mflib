@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/04/15 15:15:21 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/22 00:40:35 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/11/07 14:53:51 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,15 @@
 # include <fcntl.h>
 # include <sys/uio.h>
 # include <unistd.h>
+# include "mfstring.h"
+# include "mflist2.h"
 # include <stdlib.h>
+
+typedef struct  s_fd_buff
+{
+    int         fd;
+    char        *buff;
+}               t_fd_buff;
 
 int			get_next_line(const int fd, char **line);
 

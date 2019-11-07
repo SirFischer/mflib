@@ -6,7 +6,7 @@
 /*   By: mfischer <mfischer@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/20 15:03:27 by mfischer          #+#    #+#             */
-/*   Updated: 2019/09/24 20:43:26 by mfischer         ###   ########.fr       */
+/*   Updated: 2019/11/07 15:12:35 by mfischer         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,80 +14,61 @@
 #include "mfstring.h"
 #include "mflist.h"
 
-static t_list		*mf_lstfdnew(int fd)
+t_fd_buff			*get_fd_buff(t_list2 **list, const int fd)
 {
-	t_list	*lst;
+	t_node		*head;
+	t_fd_buff	*new;
 
-	if (!(lst = (t_list *)malloc(sizeof(t_list))))
-		return (NULL);
-	lst->next = NULL;
-	lst->content_size = fd;
-	if (!(lst->content = mf_strnew(BUFF_SIZE)))
+	if (!*list)
+		if (!(*list = list2_create()))
+			return (NULL);
+	head = (*list)->list;
+	while (head && head->next)
 	{
-		free(lst);
+		if (((t_fd_buff *)head->data)->fd == fd)
+			return (head->data);
+		head = head->next;
+	}
+	if (!(new = (t_fd_buff *)malloc(sizeof(t_fd_buff))))
+		return (NULL);
+	if (!(list2_push(*list, new)))
+	{
+		free(new);
 		return (NULL);
 	}
-	return (lst);
-}
-
-static t_list		*mf_lstseek(t_list **lst, int fd)
-{
-	t_list *temp;
-	t_list *new;
-
-	temp = *lst;
-	while (temp != NULL)
-	{
-		if ((int)(temp->content_size) == fd)
-			return (temp);
-		temp = temp->next;
-	}
-	if (!(new = mf_lstfdnew(fd)))
-		return (NULL);
-	mf_lstadd(lst, new);
-	return (*lst);
-}
-
-static int			mf_shorten(char **line, t_list *lst)
-{
-	if (**line)
-	{
-		if (mf_strchr(*line, '\n'))
-		{
-			mf_strcpy((char *)lst->content, mf_strchr(*line, '\n') + 1);
-			*mf_strchr(*line, '\n') = '\0';
-		}
-		else
-			mf_strclr((char *)lst->content);
-		return (1);
-	}
-	lst->content_size = -1;
-	return (0);
+	new->fd = fd;
+	new->buff = NULL;
+	return (new);
 }
 
 int					get_next_line(const int fd, char **line)
 {
-	static t_list	*lsth;
-	t_list			*lst;
-	char			buff[BUFF_SIZE + 1];
-	int				ret;
-	char			*temp;
+	static t_list2	*list = NULL;
+	t_fd_buff		*fd_buff;
+	char			buffer[BUFF_SIZE + 1];
+	char			*tmp;
+	char			*newline;
 
-	if (BUFF_SIZE < 0 || fd < 0 || !line || read(fd, buff, 0) == -1 ||
-			!(lst = mf_lstseek(&lsth, fd)) ||
-			!(*line = mf_strdup((char *)lst->content)))
+	fd_buff = NULL;
+	if (!line || read(fd, fd_buff, 0) == -1 || !(fd_buff = get_fd_buff(&list, fd)))
 		return (-1);
-	mf_strclr(buff);
-	while (!mf_strchr(*line, '\n') && !mf_strchr(buff, '\n') &&
-			(ret = read(fd, buff, BUFF_SIZE)))
+	while (!(newline = mf_strchr(fd_buff->buff, '\n')) && read(fd, buffer, BUFF_SIZE))
 	{
-		if (buff[0] == 0)
-			return (0);
-		buff[ret] = '\0';
-		temp = *line;
-		if (!(*line = mf_strjoin(*line, buff)))
+		buffer[BUFF_SIZE] = '\0';
+		tmp = fd_buff->buff;
+		if (!(fd_buff->buff = mf_strjoin(fd_buff->buff, buffer)))
+		{
+			free(buffer);
+			fd_buff->buff = tmp;
 			return (-1);
-		free(temp);
+		}
+		if (tmp)
+			free(tmp);
 	}
-	return (mf_shorten(line, lst));
+	*line = fd_buff->buff;
+	if (!newline)
+		return (0);
+	fd_buff->buff = mf_strsub(newline, 1, BUFF_SIZE);
+	*newline = '\0';
+	return (1);
 }
